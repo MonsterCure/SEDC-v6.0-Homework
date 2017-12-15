@@ -9,14 +9,9 @@
     height: 950px;
     position: relative;
     margin: 0 auto;
-    /* display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: flex-start; */
 }
 
 #tabs {
-    /* flex: 1 100%; */
     position: relative;
     width: 90%;
     height: 900px;
@@ -59,8 +54,6 @@ hr {
 }
 
 .firstDiv {
-    /* order: 1;
-    flex: 1 50%; */
     width: 50%;
     height: auto;
     float: left;
@@ -73,8 +66,6 @@ hr {
 }
 
 .secondDiv {
-    /* order: 2;
-    flex: 1 50%; */
     width: 50%;
     text-align: center;
     height: auto;
@@ -98,8 +89,4 @@ hr {
     font-size: 2em;
     font-weight: 300;
     text-align: center;
-}
-
-#tabs-1 > div {
-    /* flex: 1 50%; */
 }

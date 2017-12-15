@@ -1,0 +1,195 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    width: 100%;
+    height: auto;
+}
+
+h1 {
+    font-size: 36px;
+    font-family: 'Ubuntu', sans-serif;
+    color: black;
+    text-align: center;
+    padding-top: 90px;
+    padding-bottom: 70px;
+}
+
+.box {
+    width: 450px;
+    height: 150px;
+    float: left;
+}
+
+.rotation {
+    width: 46px;
+    height: 10px;
+    position: relative;
+    top: 70px;
+    left: 202px;
+    animation: rotate 2s linear .5s infinite;
+    -webkit-animation: rotate 2s linear .5s infinite;
+    -moz-animation: rotate 2s linear .5s infinite;
+    -o-animation: rotate 2s linear .5s infinite;
+    -ms-animation: rotate 2s linear .5s infinite;
+}
+
+#wrapper {
+    width: 900px;
+    margin: 0 auto;
+    height: 300px;
+    padding: 5px;
+    background-color: black;
+}
+
+#div1, #div4 {
+    background-color: #dd4838;
+    position: relative;
+}
+
+#div2, #div3 {
+    background-color: #e84c3c;
+    position: relative;
+}
+
+#block1, #block3 {
+    width: 26%;
+    height: 2%;
+    background-color: white;
+    position: absolute;
+    top: 43%;
+    left: 37%;
+}
+
+#block2, #block4, #block5 {
+    width: 26%;
+    height: 13%;
+    font-family: 'Pontano Sans', sans-serif;
+    color: white;
+    text-align: center;
+    background-color: #e84c3c;
+    margin-top: 1px;
+    margin-bottom: 1px;
+    padding-bottom: 2px;
+    position: absolute;
+    top: 45%;
+    left: 37%;
+}
+
+#block3 {
+    top: 60%;
+    left: 37%;
+}
+
+#block4 {
+    background-color: rgba(255, 255, 255, 0.1);
+    margin: 0;
+}
+
+#block5 {
+    background-color: white;
+    margin: 0;
+}
+
+#block1, #block3, #block5 {
+    animation: slide 6s ease-in-out infinite;
+    -webkit-animation: slide 6s ease-in-out infinite;
+    -moz-animation: slide 6s ease-in-out infinite;
+    -o-animation: slide 6s ease-in-out infinite;
+    -ms-animation: slide 6s ease-in-out infinite;
+}
+
+#circle1, #circle2, #circle3 {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.5);
+    float: left;
+}
+
+#circle2 {
+    background-color: white;
+    margin-left: 8px;
+}
+
+#circle3 {
+    margin-left: 8px;
+}
+
+#block6, #block7 {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 60px;
+    left: 210px;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+#block7 {
+    background-color: white;
+    animation: fillsquare 5s linear infinite;
+    -webkit-animation: fillsquare 5s linear infinite;
+    -moz-animation: fillsquare 5s linear infinite;
+    -o-animation: fillsquare 5s linear infinite;
+    -ms-animation: fillsquare 5s linear infinite;
+}
+
+#small-circle {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+    top: 51px;
+    left: 201px;
+    animation: spinner 2s linear 0s infinite normal forwards;
+    -webkit-animation: spinner 2s linear 0s infinite normal forwards;
+    -moz-animation: spinner 2s linear 0s infinite normal forwards;
+    -o-animation: spinner 2s linear 0s infinite normal forwards;
+    -ms-animation: spinner 2s linear 0s infinite normal forwards;
+}
+
+@keyframes slide {
+    0% {width: 0%;}
+    70% {width: 26%; opacity: 1}
+    100% {opacity: 0}
+}
+
+@keyframes fillsquare {
+    0%   {width: 0px;}
+    70% {width: 20px; opacity: 1}
+    100% {opacity: 0}
+}
+
+@keyframes rotate {
+    0% {transform: rotate(0deg)}
+    25% {transform: rotate(180deg)}
+    50% {transform: rotate(180deg)}
+    75% {transform: rotate(360deg)}
+    100% {transform: rotate(360deg)}
+}
+
+@keyframes spinner {
+    0% {
+        top: 51px;
+        left: 201px;
+    }
+    25% {
+        top: 51px;
+        left: 242px;
+    }
+    50% {
+        top: 91px;
+        left: 242px;
+    }
+    75% {
+        top: 91px;
+        left: 201px;
+    }
+    100% {
+        top: 51px;
+        left: 201px;
+    }
+}

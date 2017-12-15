@@ -1,0 +1,81 @@
+* {
+    font-family: 'Bellefair', serif;
+    margin: 0;
+    padding: 0;
+}
+
+table {
+    border: 1px solid #585C5D;
+    width: 60%;
+    height: auto;
+    margin: auto;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+table td,
+table th {
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 1px solid rgb(88, 92, 93);
+    font-weight: 300;
+	font-size: 45px;
+    color: #585C5D;
+	text-transform: none;
+	text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+input {
+    background-color: rgba(235, 226, 224, 0.286);
+    border: 1px solid;
+    border-radius: 5px;
+    color: rgb(88, 92, 93);
+    display: inline-block;
+    font-size: 1em;
+    font-weight: 300;
+    margin: 5px 0;
+    padding: 5px;
+    text-align: center;
+    width: 70%;
+}
+
+input:hover {
+    background-color: rgba(231, 216, 213, 0.322);
+}
+
+
+hr {
+    border: 0;
+    color: rgb(93, 88, 88);
+    height: 1px; 
+    background-image: -webkit-linear-gradient(left, rgba(240, 240, 240, 0.671), rgb(93, 89, 88), rgba(240, 240, 240, 0.725));
+    background-image: -moz-linear-gradient(left, rgba(240, 240, 240, 0.671), rgb(93, 89, 88), rgba(240, 240, 240, 0.725));
+    /* background-image: -ms-linear-gradient(left, #f0f0f0ab, rgb(93, 89, 88), #f0f0f0b9); */
+    background-image: -o-linear-gradient(left, rgba(240, 240, 240, 0.671), rgb(93, 89, 88), rgba(240, 240, 240, 0.725));  
+    margin: 10px auto;
+    width: 90%;
+}
+
+.container {
+    background: url(../images/horoscopochino005hq-01.jpg) no-repeat fixed center;
+    width: auto;
+    height: auto;
+    position: relative;
+    margin: 0 auto;
+	padding: 0;
+}
+
+#table {
+    padding-top: 120px;
+    padding-bottom: 500px;
+}
+
+#result {
+    color: rgb(121, 34, 34);
+    padding-top: 20px;
+}
+
+#sbtbtn1 {
+    width: auto;
+    padding: 5px 20px;
+}

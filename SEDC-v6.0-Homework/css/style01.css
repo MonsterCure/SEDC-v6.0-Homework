@@ -1,0 +1,249 @@
+* {
+	font-family: 'Play', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+#wrapper {
+    background: rgb(3, 3, 3) url(../images/ahmed-badawy-382007.jpg) no-repeat fixed center;
+    width: auto;
+    height: 950px;
+    position: relative;
+    margin: 0 auto;
+}
+
+.lang-item {
+	width: 210px;
+	height: 210px;
+	border-radius: 50%;
+	position: relative;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+	cursor: default;
+}
+
+.lang-info-wrap {
+	position: absolute;
+	width: 210px;
+	height: 210px;
+	border-radius: 50%;
+	perspective: 800px;
+	transition: all 0.4s ease-in-out;
+	background: #f9f9f9 url(../images/bg.jpg);
+	box-shadow: 
+		0 0 0 20px rgba(255,255,255,0.2), 
+		inset 0 0 3px rgba(115,114, 23, 0.8);
+}
+
+.lang-info{
+	position: absolute;
+	width: 210px;
+	height: 210px;
+	border-radius: 50%;
+	transition: all 0.4s ease-in-out;
+	transform-style: preserve-3d;
+}
+
+.lang-info > div {
+	display: block;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	background-position: center center;
+	backface-visibility: hidden;
+}
+
+.lang-info .lang-info-back {
+	transform: rotate3d(0,1,0,180deg);
+	background: rgb(66, 66, 66);
+}
+
+.lang-info h1 {
+	color: rgb(233, 233, 233);
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-size: 24px;
+	text-align: left;
+	margin: 0 15px;
+	padding: 60px 0 5px 0;
+	height: 20px;
+	text-shadow: 
+		0 0 5px rgb(83, 83, 83), 
+		0 5px 5px rgb(107, 106, 106);
+}
+
+.lang-info h3 {
+	color: rgb(250, 207, 150);
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-size: 16px;
+	text-align: center;
+	margin: 0 15px;
+	padding: 15px 0 10px 0;
+	height: 20px;
+	text-shadow: 
+		0 0 1px #fff, 
+		0 1px 2px rgba(0,0,0,0.3);
+}
+
+.lang-info p {
+	color: rgb(150, 222, 250);
+	padding: 10px 5px 0px 5px;
+	font-style: normal;
+	text-align: center;
+	margin: 0 3px 10px 3px;
+	font-size: 16px;
+	border-top: 1px solid rgba(255,255,255,0.5);
+}
+
+.lang-info p a {
+	display: block;
+	color: rgb(250, 207, 150);
+	font-style: normal;
+	font-weight: 700;
+	text-transform: uppercase;
+	text-decoration: none;
+	text-align: center;
+	font-size: 14px;
+	letter-spacing: 1px;
+	padding-top: 4px;
+}
+
+.lang-info p a:hover {
+	color: rgba(252, 225, 69, 0.8);
+}
+
+.lang-item:hover .lang-info-wrap {
+	box-shadow:
+		0 0 0 0 rgba(255,255,255,0.8), 
+		inset 0 0 3px rgba(115,114, 23, 0.8);
+}
+
+.lang-item:hover .lang-info {
+	transform: rotate3d(0,1,0,-180deg);
+}
+
+.lang-img-1 {
+	/* background: url(../images/python.png) no-repeat fixed center/contain; -works without fixed*/
+	background: url(../images/python.png) no-repeat center/contain;	
+	/* background: url(../images/python.png) no-repeat; */
+	/* background-size: 100%; - for center/contain*/
+	
+}
+
+.lang-img-2 {
+	background: url(../images/c.png) no-repeat center/contain;
+}
+
+.lang-img-3 {
+	background: url(../images/java.png) no-repeat center/contain;
+}
+
+.lang-img-4 {
+	background: url(../images/c++.png) no-repeat center/contain;
+}
+
+.lang-img-5 {
+	background: url(../images/csharp.png) no-repeat center/contain;
+}
+
+.lang-img-6 {
+	background: url(../images/bg.jpg) no-repeat center/contain;
+}
+
+.lang-img-7 {
+	background: url(../images/r.png) no-repeat center/contain;
+}
+
+.lang-img-8 {
+	background: url(../images/js.png) no-repeat center/contain;
+}
+
+.lang-img-9 {
+	background: url(../images/php.png) no-repeat center/contain;
+}
+
+.lang-img-10 {
+	background: url(../images/go.png) no-repeat center/contain;
+}
+
+.lang-img-11 {
+	background: url(../images/swift.png) no-repeat center/contain;
+}
+
+#about {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+#python {
+	position: fixed;
+	top: 35%;
+	left: 22%;
+	transform: translate(-50%, -50%);
+}
+
+#c {
+	position: fixed;
+	top: 20%;
+	left: 35%;
+	transform: translate(-50%, -50%);
+}
+
+#java {
+	position: fixed;
+	top: 15%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+#cpp {
+	position: fixed;
+	top: 20%;
+	left: 65%;
+	transform: translate(-50%, -50%);
+}
+
+#csharp {
+	position: fixed;
+	top: 35%;
+	left: 78%;
+	transform: translate(-50%, -50%);
+}
+
+#swift {
+	position: fixed;
+	top: 63%;
+	left: 22%;
+	transform: translate(-50%, -50%);
+}
+
+#go {
+	position: fixed;
+	top: 80%;
+	left: 35%;
+	transform: translate(-50%, -50%);
+}
+
+#php {
+	position: fixed;
+	top: 85%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+#js {
+	position: fixed;
+	top: 80%;
+	left: 65%;
+	transform: translate(-50%, -50%);
+}
+
+#ruby {
+	position: fixed;
+	top: 63%;
+	left: 78%;
+	transform: translate(-50%, -50%);
+}

@@ -1,0 +1,44 @@
+* {
+    font-family: 'Bellefair', serif;
+    margin: 0;
+    padding: 0;
+}
+
+table {
+    border: 1px solid rgb(88, 92, 93);
+    width: 60%;
+    height: auto;
+    margin: auto;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+table td,
+table th {
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 1px solid rgb(88, 92, 93);
+    font-weight: 300;
+	font-size: 45px;
+    color: rgb(88, 92, 93);
+	text-transform: none;
+	text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+#wrapper {
+    background: url(../images/peter-nguyen-128476.jpg) no-repeat fixed center;
+    width: auto;
+    height: auto;
+    position: relative;
+    margin: 0 auto;
+	padding: 0;
+}
+
+#forTable {
+    padding-top: 180px;
+    padding-bottom: 600px;
+}
+
+#result {
+    color: #D91B3B;
+}

@@ -1,0 +1,81 @@
+* {
+    font-family: 'Bellefair', serif;
+    margin: 0;
+    padding: 0;
+}
+
+table {
+    border: 1px solid rgb(88, 92, 93);
+    width: 60%;
+    height: auto;
+    margin: auto;
+    background-color: rgba(255, 255, 255, 0.432);
+}
+
+table td,
+table th {
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 1px solid rgb(88, 92, 93);
+    font-weight: 300;
+	font-size: 45px;
+    color: rgb(88, 92, 93);
+	text-transform: none;
+	text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+input {
+    background-color: rgba(224, 230, 235, 0.396);
+    border: 1px solid;
+    border-radius: 5px;
+    color: rgb(88, 92, 93);
+    display: inline-block;
+    font-size: 1em;
+    font-weight: 300;
+    margin: 5px 0;
+    padding: 5px;
+    text-align: center;
+    width: 70%;
+}
+
+input:hover {
+    background-color: rgba(213, 224, 231, 0.576);
+}
+
+
+hr {
+    border: 0;
+    color: rgb(88, 92, 93);
+    height: 1px; 
+    background-image: -webkit-linear-gradient(left, rgba(240, 240, 240, 0.671), rgb(88, 92, 93), rgba(240, 240, 240, 0.725));
+    background-image: -moz-linear-gradient(left, rgba(240, 240, 240, 0.671), rgb(88, 92, 93), rgba(240, 240, 240, 0.725));
+    /* background-image: -ms-linear-gradient(left, rgba(240, 240, 240, 0.671), rgb(88, 92, 93), rgba(240, 240, 240, 0.725)); */
+    background-image: -o-linear-gradient(left, rgba(240, 240, 240, 0.671), rgb(88, 92, 93), rgba(240, 240, 240, 0.725));
+    margin: 10px auto;
+    width: 90%;
+}
+
+
+#wrapper {
+    background: url(../images/peter-nguyen-128476.jpg) no-repeat fixed center;
+    width: auto;
+    height: auto;
+    position: relative;
+    margin: 0 auto;
+	padding: 0;
+}
+
+#forTable {
+    padding-top: 180px;
+    padding-bottom: 600px;
+}
+
+#result {
+    color: rgb(217, 27, 59);
+}
+
+#sbtbtn1 {
+    width: auto;
+    padding: 5px 20px;
+}

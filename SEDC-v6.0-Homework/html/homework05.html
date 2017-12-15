@@ -1,0 +1,127 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <![endif]-->
+    <title>Flowcharts extra</title>
+    <link id="favicon" rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+    <link type="text/css" rel="stylesheet" href="../css/style05a.css">
+    <link type="text/css" rel="stylesheet" href="../css/jquery-ui.css">
+    <link type="text/css" rel="stylesheet" href="../css/jquery-ui.theme.css">
+    <link type="text/css" rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/cupertino/jquery-ui.css">
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+</head>
+
+<body>
+    <div id="wrapper">
+        <div id="tabs">
+            <ul>
+                <li>
+                    <a href="#tabs-1">Equal numbers?</a>
+                </li>
+                <li>
+                    <a href="#tabs-2">Odd or even number?</a>
+                </li>
+                <li>
+                    <a href="#tabs-3">Positive or negative number?</a>
+                </li>
+                <li>
+                    <a href="#tabs-4">Leap year or not?</a>
+                </li>
+                <li>
+                    <a href="#tabs-5">Can or can't vote?</a>
+                </li>
+            </ul>
+            <div id="tabs-1">
+                <div class="firstDiv">
+                    <img src="../images/flowchart006.png" alt="Equal numbers?">
+                </div>
+                <div class="secondDiv">
+                    <h2>JavaScript Implementation</h2>
+                    <h4>Type in two numbers:</h4>
+                    <input type="text" id="numInput1" placeholder="Numbers...">
+                    <input type="submit" id="sbtbtn1" value="Submit">
+                    <hr>
+                    <div>
+                        <p id="results1"></p>
+                    </div>
+                </div>
+            </div>
+            <div id="tabs-2">
+                <div class="firstDiv">
+                    <img src="../images/flowchart007.png" alt="Odd or even number?">
+                </div>
+                <div class="secondDiv">
+                    <h2>JavaScript Implementation</h2>
+                    <h4>Type in a number:</h4>
+                    <input type="text" id="numInput2" placeholder="Number...">
+                    <input type="submit" id="sbtbtn2" value="Submit">
+                    <hr>
+                    <div>
+                        <p id="results2"></p>
+                    </div>
+                </div>
+            </div>
+            <div id="tabs-3">
+                <div class="firstDiv">
+                    <img src="../images/flowchart008.png" alt="Positive or negative number?">
+                </div>
+                <div class="secondDiv">
+                    <h2>JavaScript Implementation</h2>
+                    <h4>Type in two numbers:</h4>
+                    <input type="text" id="numInput3" placeholder="Numbers...">
+                    <input type="submit" id="sbtbtn3" value="Submit">
+                    <hr>
+                    <div>
+                        <p id="results3"></p>
+                    </div>
+                </div>
+            </div>
+            <div id="tabs-4">
+                <div class="firstDiv">
+                    <img src="../images/flowchart009.png" alt="Positive or negative number?">
+                </div>
+                <div class="secondDiv">
+                    <h2>JavaScript Implementation</h2>
+                    <h4>Input a year:</h4>
+                    <input type="text" id="numInput4" placeholder="Year...">
+                    <input type="submit" id="sbtbtn4" value="Submit">
+                    <hr>
+                    <div>
+                        <p id="results4"></p>
+                    </div>
+                </div>
+            </div>
+            <div id="tabs-5">
+                <div class="firstDiv">
+                    <img src="../images/flowchart010.png" alt="Can or can't vote?">
+                </div>
+                <div class="secondDiv">
+                    <h2>JavaScript Implementation</h2>
+                    <h4>Input your age:</h4>
+                    <input type="text" id="numInput5" placeholder="Age...">
+                    <input type="submit" id="sbtbtn5" value="Submit">
+                    <hr>
+                    <div>
+                        <p id="results5"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../js/jquery-3.2.1.min.js" type="text/javascript"></script>
+    <script src="../js/jquery-ui.js" type="text/javascript"></script>
+    <script>
+        $(function () {
+            $('#tabs').tabs();
+        });
+    </script>
+    <script src="../js/script05.js" type="text/javascript"></script>
+</body>
+
+</html>

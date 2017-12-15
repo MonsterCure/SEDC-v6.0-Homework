@@ -1,0 +1,45 @@
+* {
+    font-family: 'Bellefair', serif;
+    margin: 0;
+    padding: 0;
+}
+
+table {
+    border: 1px solid #585C5D;
+    width: 65%;
+    height: auto;
+    margin: auto;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+table td {
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 1px solid #585C5D;
+    font-weight: 300;
+	font-size: 25px;
+    color: #585C5D;
+    text-transform: none;
+    text-align: center;
+    width: 20%;
+    text-align: center;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+table td a {
+    text-decoration: none;
+    color: #585C5D;
+}
+
+#wrapper {
+    background: url(../images/scott-webb-186404.jpg) no-repeat fixed center;
+    width: auto;
+    height: 1000px;
+    position: relative;
+    margin: 0 auto;
+}
+
+#forTable {
+    padding-top: 100px;
+    padding-bottom: 200px;
+}

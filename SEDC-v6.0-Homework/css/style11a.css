@@ -1,0 +1,171 @@
+* {
+    font-family: 'Cormorant Garamond', serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+main {
+    position: relative;
+    float: left;
+    width: 50%;
+    padding-left: 10%;
+}
+
+aside {
+    position: relative;
+    float: right;
+    width: 20%;
+    padding-right: 10%;
+}
+
+footer {
+    position: relative;
+    width: 80%;
+    clear: both;
+    margin: 0 auto;
+    padding: 40px 0 20px 0;
+}
+
+header > img {
+    width: 100px;
+    height: auto;
+    padding: 0 10px;
+}
+
+nav {
+    max-width: 80%;
+    min-width: 10%;
+    text-align: center;
+}
+
+nav > h1 {
+    vertical-align: top;
+    padding: 30px 2%;
+    font-size: 2.5em;
+    font-weight: 700;
+}
+
+nav > ul {
+    padding: 10px 0 10px 0;
+}
+
+nav li {
+    padding: 10px 0 10px 15px;    
+}
+
+nav a {
+    text-decoration: none;
+    color: green;
+    font-size: 1.2em;
+    font-weight: 500;    
+}
+
+article p {
+    text-align: justify;
+    padding: 10px 0;
+    font-size: 1em;
+}
+
+article a {
+    text-decoration: none;
+    color: green;
+    font-size: 1.2em;
+    font-weight: 500;
+    padding-left: 25px;
+}
+
+article img {
+    display: block;
+    width: 45%;
+    margin: 0 auto;
+    padding: 10px 20px 10px 15px;
+}
+
+h3 + p {
+    font-style: italic;
+    padding: 15px 25px;
+}
+
+main, aside, header > img, nav, nav li, nav > h1 {
+    display: inline-block;
+}
+
+hr {
+    border: 0;
+    color: #000000;
+    height: 1px; 
+    background-image: -webkit-linear-gradient(left, rgb(240, 240, 240), rgb(140, 139, 139), rgb(240, 240, 240));
+    background-image: -moz-linear-gradient(left, rgb(240, 240, 240), rgb(140, 139, 139), rgb(240, 240, 240));
+    /* background-image: -ms-linear-gradient(left, rgb(240, 240, 240), rgb(140, 139, 139), rgb(240, 240, 240)); */
+    background-image: -o-linear-gradient(left, rgb(240, 240, 240), rgb(140, 139, 139), rgb(240, 240, 240));
+    margin: 30px auto;
+    width: 80%;
+}
+
+aside h4 {
+    text-align: center;
+    font-size: 1.2em;
+    font-weight: 500;
+    color: green;
+}
+
+aside > ul > li {
+    list-style: none;
+}
+
+aside > ul > li > ul > li:nth-of-type(1) {
+    list-style-image: url(../images/wikipedia.png);
+    padding: 5px 5px 5px 15px;
+}
+
+aside > ul > li > ul > li:nth-of-type(2) {
+    list-style-image: url(../images/tolkienlibrary.png);
+    padding: 5px 5px 60px 15px;    
+}
+
+aside ul li a {
+    text-decoration: none;
+    color: rgb(99, 73, 35);
+    font-size: 1.1em;
+    font-weight: 500;
+}
+
+.titles{
+    font-size: 2em;
+    font-weight: 500;
+    text-align: center;
+    padding: 20px 0;
+}
+
+#wrapper {
+    width: 100%;
+    height: auto;
+    position: relative;
+    margin: 0 auto;
+}
+
+#tolkiensociety {
+    list-style-image: url(../images/tolkiensociety.png);
+}
+
+#lotr_pic {
+    width: 75%;
+}
+
+@media screen and (max-width: 480px) {
+    main {
+        width: 80%;
+    }
+    aside {
+        display: block;
+        width: 60%;
+        margin: 0 auto;
+    }
+}

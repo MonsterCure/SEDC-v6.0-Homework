@@ -1,0 +1,88 @@
+* {
+    font-family: 'Bellefair', serif;
+    margin: 0;
+    padding: 0;
+}
+
+table {
+    border: 1px solid rgb(88, 92, 93);
+    width: 60%;
+    height: auto;
+    margin: auto;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+table td,
+table th {
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgb(21, 6, 2);
+    font-weight: 300;   
+	font-size: 45px;
+    color: rgb(21, 6, 2);
+	text-transform: none;
+	text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+ul {
+    list-style-type: square;
+}
+
+ul > li {
+    list-style-position: inside;
+}
+
+input {
+    background-color: rgba(235, 226, 224, 0.286);
+    border: 1px solid;
+    border-radius: 5px;
+    color: rgba(21, 6, 2, 0.8);
+    display: inline-block;
+    font-size: 1em;
+    font-weight: 300;
+    margin: 5px 0;
+    padding: 5px;
+    text-align: center;
+    width: 70%;
+}
+
+input:hover {
+    background-color: rgba(231, 216, 213, 0.322);
+}
+
+
+hr {
+    border: 0;
+    color: rgb(93, 88, 88);
+    height: 1px; 
+    background-image: -webkit-linear-gradient(left, rgba(240, 240, 240, 0.671), rgb(93, 89, 88), rgba(240, 240, 240, 0.725));
+    background-image: -moz-linear-gradient(left, rgba(240, 240, 240, 0.671), rgb(93, 89, 88), rgba(240, 240, 240, 0.725));
+    /* background-image: -ms-linear-gradient(left, rgba(240, 240, 240, 0.671), rgb(93, 89, 88), rgba(240, 240, 240, 0.725)); */
+    background-image: -o-linear-gradient(left, rgba(240, 240, 240, 0.671), rgb(93, 89, 88), rgba(240, 240, 240, 0.725));  
+    margin: 10px auto;
+    width: 90%;
+}
+
+#wrapper {
+    background: url(../images/jj-thompson-142854.jpg) no-repeat fixed center;
+    width: auto;
+    height: auto;
+    position: relative;
+    margin: 0 auto;
+	padding: 0;
+}
+
+#forTable {
+    padding-top: 120px;
+    padding-bottom: 600px;
+}
+
+#result {
+    color: rgb(21, 6, 2);
+}
+
+#sbtbtn1 {
+    width: auto;
+    padding: 5px 20px;
+}

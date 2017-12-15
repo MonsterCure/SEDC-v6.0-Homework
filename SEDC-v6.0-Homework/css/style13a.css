@@ -1,0 +1,167 @@
+* {
+	font-family: 'Titillium Web', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(44, 165, 141);
+}
+
+header:first-of-type, footer {
+    background-color: rgb(255, 255, 255);
+    width: 99%;
+    margin: 5px auto;
+    min-width: 620px;
+    min-height: 72px;
+}
+
+header a {
+    width: 15%;
+    display: inline-block;
+    padding: 10px 10px 5px 10px;
+}
+
+nav {
+    float: right;
+}
+
+nav > ul > li {
+    display: inline-block;    
+}
+
+nav > ul > li > a:link {
+    font-family: 'Maven Pro', sans-serif;
+    text-transform: uppercase;
+    color: rgb(252, 17, 107);
+    width: auto;
+    padding: 25px;
+}
+
+nav > ul > li > a:visited {
+    color: rgb(17, 119, 252);
+}
+
+nav > ul > li > a:hover {
+    color: rgb(17, 252, 95);
+}
+
+nav > ul > li > a:active {
+    color: rgb(17, 119, 252);
+}
+
+main {
+    float: right;
+    width: 65%;
+    height: 100%;
+}
+
+aside {
+    float: left;
+    width: 30%;
+    min-width: 200px;
+    height: 99%;
+    border: 7px double black;
+    background-color: white;
+    overflow: scroll;
+    margin: 10px;
+    padding: 10px 5px;
+}
+
+aside p {
+    margin: 10px;
+    text-align: justify;
+}
+
+footer {
+    clear: both;
+    float: none;
+}
+
+footer p {
+    font-family: 'Maven Pro', sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    padding: 27px 0px 27px 0px;
+}
+
+.siteArticles {
+    background-color: rgb(132, 188, 156);
+    /* border: 7px double; */
+    border-width: 7px;
+    border-style: double;
+    border-color: white rgb(10, 35, 66) rgb(10, 35, 66) rgb(10, 35, 66);
+    width: 100%;
+    min-width: 730px;
+    height: 32%;
+    margin: 10px;
+    min-height: 230px;
+}
+
+.siteArticles h1 {
+    margin: 20px auto;
+    text-align: center;
+    min-width: auto;
+    font-size: 3em;
+}
+
+.siteArticles h3 {
+    margin: 15px auto;
+    font-size: 1em;
+    text-align: center;
+    min-width: auto;
+    font-family: 'Lora', serif;
+    text-transform: uppercase;
+}
+
+.siteArticles p {
+    margin: 10px;
+    text-align: left;
+    min-width: auto;
+}
+
+#wrapper {
+    width: 100%;
+    height: auto;
+}
+
+#wrapper1 {
+    width: 90%;
+    min-width: 1000px;
+    height: 1000px;
+    margin: 0 auto;
+}
+
+#article1 h1, #article1 p {
+    font-family: 'Buda', cursive;
+    font-style: oblique;
+}
+
+#article2 h1, #article2 p {
+    font-family: 'Tangerine', cursive;
+}
+
+#article2 p {
+    font-size: 1.5em;
+}
+
+#article3 h1, #article3 p {
+    font-family: 'IM Fell English', serif;
+    font-style: italic;
+}
+
+#article1 p::first-line {
+    text-decoration: line-through rgb(244, 97, 151);
+}
+
+#article3 p::first-letter {
+    color: rgb(244, 97, 151);
+    font-size: 2em;
+    font-weight: bold;
+}
+
+#span {
+    font-family: 'Tangerine', cursive;
+    vertical-align: super;
+    background-color: rgb(244, 97, 151);
+}

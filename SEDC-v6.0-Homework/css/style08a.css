@@ -1,0 +1,36 @@
+* {
+    font-family: 'Bellefair', serif;
+    margin: 0;
+}
+
+#wrapper {
+    background: #e4dcd6;
+    width: auto;
+    height: auto;
+    padding: 50px 15% 20px 15%;
+    position: relative;
+    margin: 0 auto;
+}
+
+p {
+    width: 100%;
+    text-align: justify;
+    font-size: 1.5em;
+    margin: 30px auto;
+}
+
+h1 {
+    font-size: 3em;
+    font-weight: 300;
+    margin: 30px auto;
+}
+
+h2 {
+    font-size: 2em;
+    font-weight: 300;    
+}
+
+img {
+    display: block;
+    margin: 20px auto;
+}

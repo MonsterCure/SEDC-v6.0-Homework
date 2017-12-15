@@ -1,0 +1,69 @@
+* {
+    font-family: 'Play', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+table {
+    border: 1px solid rgb(88, 92, 93);
+    width: 80%;
+    height: auto;
+    margin: 0px auto;
+}
+
+table td,   
+table th {
+    background-color: rgba(255, 255, 255, 0.438);
+    border: 1px solid rgb(88, 92, 93);
+    font-weight: 300;
+	font-size: 1.8em;
+    color: rgb(88, 92, 93);
+	text-transform: none;
+	text-align: center;
+    margin: 5px;
+    padding: 30px;
+}
+
+input {
+    background-color: rgba(224, 230, 235, 0.761);
+    border: 1px solid;
+    border-radius: 5px;
+    color: rgb(88, 92, 93);
+    display: inline-block;
+    font-size: 1em;
+    font-weight: 300;
+    margin: 5px 0;
+    padding: 5px;
+    text-align: center;
+    width: 70%;
+}
+
+input:hover {
+    background-color: rgba(213, 224, 231, 0.753);
+}
+
+
+hr {
+    border: 0;
+    color: #585C5D;
+    height: 1px; 
+    background-image: -webkit-linear-gradient(left, rgba(240, 240, 240, 0.671), rgb(88, 92, 93), rgba(240, 240, 240, 0.725));
+    background-image: -moz-linear-gradient(left, rgba(240, 240, 240, 0.671), rgb(88, 92, 93), rgba(240, 240, 240, 0.725));
+    /* background-image: -ms-linear-gradient(left, rgba(240, 240, 240, 0.671), rgb(88, 92, 93), rgba(240, 240, 240, 0.725)); */
+    background-image: -o-linear-gradient(left, rgba(240, 240, 240, 0.671), rgb(88, 92, 93), rgba(240, 240, 240, 0.725));
+    margin: 10px auto;
+    width: 90%;
+}
+
+#wrapper {
+    background: url(../images/jeremy-yap-119489a.jpg) no-repeat fixed center;
+    width: auto;
+    height: 950px;
+    position: relative;
+    padding-top: 150px;
+}
+
+#sbtbtn1 {
+    width: auto;
+    padding: 5px 10px;
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <![endif]-->
+    <title>Flowcharts 3</title>
+    <link id="favicon" rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+    <link type="text/css" rel="stylesheet" href="../css/style05a.css">
+    <link type="text/css" rel="stylesheet" href="../css/jquery-ui.css">
+    <link type="text/css" rel="stylesheet" href="../css/jquery-ui.theme.css">
+    <link type="text/css" rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/cupertino/jquery-ui.css">
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
+</head>
+
+<body>
+    <div id="wrapper">
+        <div id="tabs">
+            <ul>
+                <li>
+                    <a href="#tabs-1">Class marks</a>
+                </li>
+                <li>
+                    <a href="#tabs-2">Number of coins</a>
+                </li>
+            </ul>
+            <div id="tabs-1">
+                <div class="firstDiv">
+                    <img src="../images/flowchart011.png" alt="Class marks">
+                </div>
+                <div class="secondDiv">
+                    <h2>JavaScript Implementation</h2>
+                    <h4>Type in the students' marks:</h4>
+                    <input type="text" id="numInput1" placeholder="Marks...">
+                    <input type="submit" id="sbtbtn1" value="Submit">
+                    <hr>
+                    <div>
+                        <p id="results1"></p>
+                        <p id="results2"></p>
+                        <p id="results3"></p>
+                    </div>
+                </div>
+            </div>
+            <div id="tabs-2">
+                <div class="firstDiv">
+                    <img src="../images/flowchart012.png" alt="Number of coins">
+                </div>
+                <div class="secondDiv">
+                    <h2>JavaScript Implementation</h2>
+                    <h4>Type in a sum of money in cents:</h4>
+                    <input type="text" id="numInput2" placeholder="Sum...">
+                    <input type="submit" id="sbtbtn2" value="Submit">
+                    <hr>
+                    <div>
+                        <p id="results4"></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../js/jquery-3.2.1.min.js" type="text/javascript"></script>
+    <script src="../js/jquery-ui.js" type="text/javascript"></script>
+    <script>
+        $(function () {
+            $('#tabs').tabs();
+        });
+    </script>
+    <script src="../js/script06.js" type="text/javascript"></script>
+</body>
+
+</html>

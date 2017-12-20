@@ -1,0 +1,415 @@
+* {
+	font-family: 'Dosis', sans-serif;
+	font-weight: 200;
+	margin: 0;
+	padding: 0;
+}
+
+
+/* WRAPPER */
+
+.clear {
+	clear: both;
+}
+
+#wrapper {
+	width: 80%;
+	height: auto;
+	margin: 0 auto;
+}
+
+
+/* HEADER */
+
+header {
+	width: 100%;
+}
+
+header a {
+	display: inline-block;
+	text-decoration: none;
+	color: black;
+}
+
+header h1 {
+	font-family: 'Playfair Display', serif;
+	font-size: 3em;
+	color: black;
+	font-style: italic;
+	font-weight: 200;
+	display: inline-block;
+}
+
+header h1 .color {
+	color: rgb(116, 9, 9);
+	font-family: 'Playfair Display', serif;
+	font-size: 1em;
+	font-style: italic;
+	font-weight: 200;
+}
+
+header input {
+	border: 1px solid rgb(63, 59, 59);
+	border-radius: 1px;
+	padding: 5px 10px;
+	color: black;
+	box-shadow: inset 0 10px 4px -10px rgba(122, 19, 19, 0.274);
+}
+
+header input:hover {
+	border: 1px solid rgb(32, 31, 31);
+	box-shadow: inset 0 10px 4px -13px rgba(122, 19, 19, 0.411);
+}
+
+header ul {
+	list-style: none;
+	float: right;
+}
+
+header ul li {
+	display: inline-block;
+	margin-left: 10px;
+}
+
+nav {
+	float: right;
+	padding-top: 25px;
+}
+
+nav>ul>li>a:link {
+	font-size: 1.3em;
+	transition: all 0.3s ease;
+}
+
+nav>ul>li>a:visited {
+	color: rgb(116, 9, 9);
+}
+
+nav>ul>li>a:hover {
+	color: rgb(122, 19, 19);
+	text-shadow: 3px 3px 12px rgba(122, 19, 19, 0.226);
+}
+
+nav>ul>li>a:active {
+	color: rgb(116, 9, 9);
+}
+
+.header {
+	width: 80%;
+	margin: 0 auto;
+	padding: 10px 0;
+}
+
+
+/* MAIN SECTION */
+
+hr {
+	border: 0;
+	color: rgb(122, 19, 19);
+	height: 1px;
+	background-image: -webkit-linear-gradient(left, #f0f0f0, rgba(116, 23, 23, 0.342), #f0f0f0);
+	background-image: -moz-linear-gradient(left, #f0f0f0, rgba(116, 23, 23, 0.342), #f0f0f0);
+	background-image: -ms-linear-gradient(left, #f0f0f0, rgba(116, 23, 23, 0.342), #f0f0f0);
+	background-image: -o-linear-gradient(left, #f0f0f0, rgba(116, 23, 23, 0.342), #f0f0f0);
+	margin: 40px auto;
+	width: 90%;
+}
+
+.button-1 {
+	width: auto;
+	height: auto;
+	padding: 10px 20px;
+	border: 1px solid white;
+	border-radius: 1px;
+	font-size: 2.5em;
+	font-weight: 200;
+	color: white;
+	text-align: center;
+	text-decoration: none;
+	text-transform: capitalize;
+	float: right;
+	margin-top: 20px;
+}
+
+.button-1:hover {
+	background-color: rgba(255, 255, 255, 0.082);
+}
+
+#main-image {
+	background: url(../images/james-price-335314a.jpg) no-repeat center;
+	width: 90%;
+	margin: 10px auto;
+	min-height: 500px;
+}
+
+#main-image-text,
+#main-intro {
+	width: 80%;
+	margin: 0 auto;
+}
+
+#main-image-text h2 {
+	font-family: 'Playfair Display', serif;
+	font-size: 3em;
+	color: white;
+	font-style: italic;
+	text-align: right;
+	padding-top: 150px;
+	text-transform: capitalize;
+}
+
+#main-intro h2 {
+	font-family: 'Playfair Display', serif;
+	font-style: italic;
+	font-size: 2.3em;
+	padding: 20px 0;
+}
+
+#main-intro p {
+	font-size: 1.3em;
+}
+
+
+/* FEATURES SECTION */
+
+.features {
+	width: 24%;
+	float: left;
+	box-sizing: border-box;
+}
+
+.features h3 {
+	font-size: 1.3em;
+	padding: 10px 0 10px 30px;
+}
+
+.features h3 a {
+	text-decoration: none;
+	color: black;
+}
+
+.features h3:hover {
+	color: rgb(122, 19, 19);
+	text-shadow: 3px 3px 12px rgba(122, 19, 19, 0.226);
+}
+
+.features h3:active {
+	color: rgb(116, 9, 9);
+}
+
+.features h4 {
+	font-size: 1em;
+	padding: 0 0 10px 30px;
+}
+
+.features p {
+	font-size: 1em;
+	padding: 0 0 10px 30px;
+}
+
+#features {
+	width: 80%;
+	margin: 0 auto;
+}
+
+#feature-1-image,
+#feature-1-image:hover,
+#feature-2-image,
+#feature-2-image:hover,
+#feature-3-image,
+#feature-3-image:hover,
+#feature-4-image,
+#feature-4-image:hover {
+	background: url(../images/comet-embellished-gown.jpg) no-repeat center;
+	background-size: contain;
+	width: 90%;
+	min-height: 300px;
+}
+
+#feature-1-image:hover {
+	background-image: url(../images/comet-embellished-gown_f.jpg);
+}
+
+#feature-2-image {
+	background-image: url(../images/tulle-meadow-embroidered-gown.jpg);
+}
+
+#feature-2-image:hover {
+	background-image: url(../images/tulle-meadow-embroidered-gown_f.jpg);
+}
+
+#feature-3-image {
+	background-image: url(../images/cape-overlay-gown.jpg);
+}
+
+#feature-3-image:hover {
+	background-image: url(../images/cape-overlay-gown_f.jpg);
+}
+
+#feature-4-image {
+	background-image: url(../images/glen-embellished-gown.jpg);
+}
+
+#feature-4-image:hover {
+	background-image: url(../images/glen-embellished-gown_f.jpg);
+}
+
+
+/* FOOTER */
+
+footer {
+	width: 70%;
+	margin: 0 auto;
+}
+
+footer h3 {
+	font-size: 1.8em;
+	padding: 10px 0;
+}
+
+#footer-links {
+	width: 20%;
+	float: left;
+}
+
+#footer-links ul {
+	list-style: none;
+}
+
+#footer-links ul li {
+	padding: 10px 0;
+}
+
+#footer-links ul li a {
+	font-size: 1.2em;
+	text-decoration: none;
+	color: black;
+	margin: 10px 0;
+}
+
+#footer-info {
+	width: 50%;
+	float: left;
+	padding-left: 20px;
+}
+
+#footer-image {
+	max-width: 25%;
+	float: right;
+}
+
+#footer-image img {
+	width: 100%;
+}
+
+
+/* COPYRIGHT */
+
+#copyright {
+	width: 50%;
+	margin: 0 auto;
+	font-size: 1.4em;
+	text-align: center;
+	padding: 20px 0;
+}
+
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 1280px) {
+	#wrapper {
+		width: 90%;
+	}
+}
+
+@media screen and (max-width: 980px) {
+	#wrapper {
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 880px) {
+	nav {
+		float: left;
+	}
+
+	nav ul li {
+		margin-left: 0;
+		margin-right: 10px;
+	}
+
+	footer {
+		width: 80%;
+	}
+}
+
+@media screen and (max-width: 760px) {
+	#features {
+		width: 90%;
+	}
+
+	.features {
+		width: 50%;
+	}
+
+	footer {
+		width: 90%;
+	}
+
+	#footer-info {
+		width: 43%;
+		padding-right: 10px;
+	}
+
+	#footer-image {
+		max-width: 27%;
+	}
+}
+
+@media screen and (max-width: 480px) {
+	header input {
+		width: 70px;
+	}
+
+	.header {
+		width: 95%;
+	}
+
+	.features {
+		width: 100%;
+	}
+
+	#main-image {
+		width: 100%;
+	}
+
+	#main-image-text h2 {
+		padding-top: 100px;
+	}
+
+	footer {
+		padding: 0 40px;
+	}
+
+	#footer-info,
+	#footer-links,
+	#footer-image {
+		width: 90%;
+		float: left;
+		padding: 0;
+	}	
+
+	#footer-image {
+		max-width: 60%;
+	}
+}
+
+@media screen and (max-width: 320px) {
+	header input {
+		width: 50px;
+	}
+
+	#main-image-text h2 {
+		padding-top: 50px;
+	}
+}

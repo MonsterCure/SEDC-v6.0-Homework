@@ -260,6 +260,7 @@ hr {
 footer {
 	width: 70%;
 	margin: 0 auto;
+	padding: 0;
 }
 
 footer h3 {
@@ -385,10 +386,6 @@ footer h3 {
 
 	#main-image-text h2 {
 		padding-top: 100px;
-	}
-
-	footer {
-		padding: 0 40px;
 	}
 
 	#footer-info,

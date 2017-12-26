@@ -115,14 +115,14 @@ hr {
     width: 90%;
 }
 
-section:first-of-type {
+.main_section_image {
     background: url(../images/james-price-335314a.jpg) no-repeat center;
     width: 90%;
     margin: 10px auto;
     min-height: 500px;
 }
 
-section:first-of-type a {
+.main_section_image div a {
     width: auto;
     height: auto;
     padding: 10px 20px;
@@ -138,17 +138,17 @@ section:first-of-type a {
     margin-top: 20px;
 }
 
-section:first-of-type a:hover {
+.main_section_image div a:hover {
     background-color: rgba(255, 255, 255, 0.082);
 }
 
-section:first-of-type div,
-section:nth-of-type(2) {
+.main_section_image div,
+.main_section_text {
     width: 80%;
     margin: 0 auto;
 }
 
-section:first-of-type div h2 {
+.main_section_image div h2 {
     font-family: 'Playfair Display', serif;
     font-size: 3em;
     color: white;
@@ -158,14 +158,14 @@ section:first-of-type div h2 {
     text-transform: capitalize;
 }
 
-section:nth-of-type(2) h2 {
+.main_section_text h2 {
     font-family: 'Playfair Display', serif;
     font-style: italic;
     font-size: 2.3em;
     padding: 20px 0;
 }
 
-section:nth-of-type(2) p {
+.main_section_text p {
     font-size: 1.3em;
 }
 
@@ -180,7 +180,6 @@ main {
 main article {
     width: 25%;
     float: left;
-    position: relative;
     box-sizing: border-box;
 }
 
@@ -208,12 +207,12 @@ main article h4 {
     padding: 0 0 10px 30px;
 }
 
-main article span {
-    font-size: 1em;
-    padding: 0 0 10px 30px;
+.product_image_wrapper {
+    position: relative;
 }
 
-main article img {
+.product_image_outfit,
+.product_image_model {
     width: 100%;
     top: 0;
     left: 0;
@@ -242,6 +241,11 @@ main article img {
 
 .product_image_model:hover {
     opacity: 1;
+}
+
+.product_price {
+    font-size: 1em;
+    padding: 0 0 10px 30px;
 }
 
 
@@ -375,10 +379,10 @@ footer div:nth-child(3) img {
     .features {
         width: 100%;
     }
-    section:first-of-type {
+    .main_section_image {
         width: 100%;
     }
-    section:nth-of-type(2) h2 {
+    .main_section_image div h2 {
         padding-top: 100px;
     }
     footer div:nth-child(1),
@@ -397,7 +401,7 @@ footer div:nth-child(3) img {
     header input {
         width: 50px;
     }
-    section:nth-of-type(2) h2 {
+    .main_section_image div h2 {
         padding-top: 50px;
     }
 }

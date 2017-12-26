@@ -183,26 +183,26 @@ main {
     box-sizing: border-box;
 }
 
-.product h3 {
+.product__name {
     font-size: 1.3em;
     padding: 10px 0 10px 30px;
 }
 
-.product h3 a {
+.product__name a {
     text-decoration: none;
     color: black;
 }
 
-.product h3:hover {
+.product__name:hover {
     color: rgb(122, 19, 19);
     text-shadow: 3px 3px 12px rgba(122, 19, 19, 0.226);
 }
 
-.product h3:active {
+.product__name:active {
     color: rgb(116, 9, 9);
 }
 
-.product h4 {
+.product__description {
     font-size: 1em;
     padding: 0 0 10px 30px;
 }
@@ -243,7 +243,7 @@ main {
     opacity: 1;
 }
 
-.product_price {
+.product__price {
     font-size: 1em;
     padding: 0 0 10px 30px;
 }
@@ -257,25 +257,25 @@ footer {
     padding: 0;
 }
 
-footer h3 {
+.footer__section-title {
     font-size: 1.8em;
     padding: 10px 0;
 }
 
-.footer__links {
+.footer__section-links {
     width: 20%;
     float: left;
 }
 
-.footer__links ul {
+.footer__section-links ul {
     list-style: none;
 }
 
-.footer__links ul li {
+.footer__section-links ul li {
     padding: 10px 0;
 }
 
-.footer__links ul li a:link {
+.footer__section-links ul li a:link {
     font-size: 1.2em;
     text-decoration: none;
     color: black;
@@ -283,31 +283,31 @@ footer h3 {
     transition: all 0.3s ease;
 }
 
-.footer__links ul li a:visited {
+.footer__section-links ul li a:visited {
     color: rgb(116, 9, 9);
 }
 
-.footer__links ul li a:hover {
+.footer__section-links ul li a:hover {
     color: rgb(122, 19, 19);
     text-shadow: 3px 3px 12px rgba(122, 19, 19, 0.226);
 }
 
-.footer__links ul li a:active {
+.footer__section-links ul li a:active {
     color: rgb(116, 9, 9);
 }
 
-.footer__announcements {
+.footer__section-announcements {
     width: 50%;
     float: left;
     padding-left: 20px;
 }
 
-.footer__coming-soon {
+.footer__section-coming-soon {
     max-width: 25%;
     float: right;
 }
 
-.footer__coming-soon img {
+.footer__section-coming-soon img {
     width: 100%;
 }
 
@@ -360,7 +360,7 @@ footer h3 {
     footer {
         width: 90%;
     }
-    .footer__announcements {
+    .footer__section-announcements {
         width: 43%;
         padding-right: 10px;
     }
@@ -385,14 +385,12 @@ footer h3 {
     .presentation__section-image div h2 {
         padding-top: 100px;
     }
-    .footer__links,
-    .footer__announcements,
-    .footer__coming-soon {
+    .footer__section {
         width: 90%;
         float: left;
         padding: 0;
     }
-    .footer__coming-soon {
+    .footer__section-coming-soon {
         max-width: 60%;
     }
 }

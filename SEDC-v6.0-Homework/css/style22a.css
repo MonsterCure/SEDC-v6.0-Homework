@@ -40,7 +40,7 @@ header h1 {
     display: inline-block;
 }
 
-header h1 .logo_color {
+header h1 .logo-color {
     color: rgb(116, 9, 9);
     font-family: 'Playfair Display', serif;
     font-size: 1em;
@@ -101,7 +101,7 @@ nav>ul>li>a:active {
 }
 
 
-/* MAIN SECTION */
+/* PRESENTATION SECTION */
 
 hr {
     border: 0;
@@ -115,14 +115,14 @@ hr {
     width: 90%;
 }
 
-.main_section_image {
+.presentation__section-image {
     background: url(../images/james-price-335314a.jpg) no-repeat center;
     width: 90%;
     margin: 10px auto;
     min-height: 500px;
 }
 
-.main_section_image div a {
+.presentation__section-image div a {
     width: auto;
     height: auto;
     padding: 10px 20px;
@@ -138,17 +138,17 @@ hr {
     margin-top: 20px;
 }
 
-.main_section_image div a:hover {
+.presentation__section-image div a:hover {
     background-color: rgba(255, 255, 255, 0.082);
 }
 
-.main_section_image div,
-.main_section_text {
+.presentation__section-image div,
+.presentation__section-text {
     width: 80%;
     margin: 0 auto;
 }
 
-.main_section_image div h2 {
+.presentation__section-image div h2 {
     font-family: 'Playfair Display', serif;
     font-size: 3em;
     color: white;
@@ -158,61 +158,61 @@ hr {
     text-transform: capitalize;
 }
 
-.main_section_text h2 {
+.presentation__section-text h2 {
     font-family: 'Playfair Display', serif;
     font-style: italic;
     font-size: 2.3em;
     padding: 20px 0;
 }
 
-.main_section_text p {
+.presentation__section-text p {
     font-size: 1.3em;
 }
 
 
-/* FEATURES SECTION */
+/* PRODUCTS SECTION */
 
 main {
     width: 80%;
     margin: 0 auto;
 }
 
-main article {
+.product {
     width: 25%;
     float: left;
     box-sizing: border-box;
 }
 
-main article h3 {
+.product h3 {
     font-size: 1.3em;
     padding: 10px 0 10px 30px;
 }
 
-main article h3 a {
+.product h3 a {
     text-decoration: none;
     color: black;
 }
 
-main article h3:hover {
+.product h3:hover {
     color: rgb(122, 19, 19);
     text-shadow: 3px 3px 12px rgba(122, 19, 19, 0.226);
 }
 
-main article h3:active {
+.product h3:active {
     color: rgb(116, 9, 9);
 }
 
-main article h4 {
+.product h4 {
     font-size: 1em;
     padding: 0 0 10px 30px;
 }
 
-.product_image_wrapper {
+.product__image_wrapper {
     position: relative;
 }
 
-.product_image_outfit,
-.product_image_model {
+.product__image_outfit,
+.product__image_model {
     width: 100%;
     top: 0;
     left: 0;
@@ -226,20 +226,20 @@ main article h4 {
     -ms-transition: opacity 0.3s ease;
 }
 
-.product_image_outfit { /* main article img:nth-of-type(1) */
+.product__image_outfit {
     opacity: 1;
 }
 
-.product_image_model { /* main article img:nth-of-type(2) */
+.product__image_model {
     opacity: 0;
     position: absolute;
 }
 
-.product_image_outfit:hover {
+.product__image_outfit:hover {
     opacity: 0;
 }
 
-.product_image_model:hover {
+.product__image_model:hover {
     opacity: 1;
 }
 
@@ -262,20 +262,20 @@ footer h3 {
     padding: 10px 0;
 }
 
-footer div:nth-child(1) {
+.footer__links {
     width: 20%;
     float: left;
 }
 
-footer div:nth-child(1) ul {
+.footer__links ul {
     list-style: none;
 }
 
-footer div:nth-child(1) ul li {
+.footer__links ul li {
     padding: 10px 0;
 }
 
-footer div:nth-child(1) ul li a:link {
+.footer__links ul li a:link {
     font-size: 1.2em;
     text-decoration: none;
     color: black;
@@ -283,31 +283,31 @@ footer div:nth-child(1) ul li a:link {
     transition: all 0.3s ease;
 }
 
-footer div:nth-child(1) ul li a:visited {
+.footer__links ul li a:visited {
     color: rgb(116, 9, 9);
 }
 
-footer div:nth-child(1) ul li a:hover {
+.footer__links ul li a:hover {
     color: rgb(122, 19, 19);
     text-shadow: 3px 3px 12px rgba(122, 19, 19, 0.226);
 }
 
-footer div:nth-child(1) ul li a:active {
+.footer__links ul li a:active {
     color: rgb(116, 9, 9);
 }
 
-footer div:nth-child(2) {
+.footer__announcements {
     width: 50%;
     float: left;
     padding-left: 20px;
 }
 
-footer div:nth-child(3) {
+.footer__coming-soon {
     max-width: 25%;
     float: right;
 }
 
-footer div:nth-child(3) img {
+.footer__coming-soon img {
     width: 100%;
 }
 
@@ -354,17 +354,17 @@ footer div:nth-child(3) img {
     main {
         width: 90%;
     }
-    .features {
+    .product {
         width: 50%;
     }
     footer {
         width: 90%;
     }
-    footer div:nth-child(2) {
+    .footer__announcements {
         width: 43%;
         padding-right: 10px;
     }
-    footer div:nth-child(3) {
+    .footer__coming-soon {
         max-width: 27%;
     }
 }
@@ -376,23 +376,23 @@ footer div:nth-child(3) img {
     .header {
         width: 95%;
     }
-    .features {
+    .product {
         width: 100%;
     }
-    .main_section_image {
+    .presentation__section-image {
         width: 100%;
     }
-    .main_section_image div h2 {
+    .presentation__section-image div h2 {
         padding-top: 100px;
     }
-    footer div:nth-child(1),
-    footer div:nth-child(2),
-    footer div:nth-child(3) {
+    .footer__links,
+    .footer__announcements,
+    .footer__coming-soon {
         width: 90%;
         float: left;
         padding: 0;
     }
-    footer div:nth-child(3) {
+    .footer__coming-soon {
         max-width: 60%;
     }
 }
@@ -401,7 +401,7 @@ footer div:nth-child(3) img {
     header input {
         width: 50px;
     }
-    .main_section_image div h2 {
+    .presentation__section-image div h2 {
         padding-top: 50px;
     }
 }

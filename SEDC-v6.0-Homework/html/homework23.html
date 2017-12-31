@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--[if lt IE 9]>
+				<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+			<![endif]-->
+    <title>JS Objects &amp; DOM Manipulation</title>
+    <link id="favicon" rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond:300,300i,400,400i,500,500i,600,600i,700,700i&amp;subset=latin-ext" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link type="text/css" rel="stylesheet" href="../css/jquery-ui-humanity.css">
+    <link href="../css/style23.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <div id="wrapper">
+        <div id="tabs">
+            <ul>
+                <li>
+                    <a href="#tabs-1">The recipe card</a>
+                </li>
+                <li>
+                    <a href="#tabs-2">The reading list</a>
+                </li>
+                <li>
+                    <a href="#tabs-3">Order coffee drinks</a>
+                </li>
+            </ul>
+            <div id="tabs-1">
+                <div class="firstDiv">
+                    <div class="intro">
+                        <h1>The recipe card</h1>
+                        <hr>
+                        <h3>Your very own recipe card!</h3>
+                    </div>
+                    <hr>
+                    <div class="form">
+                        <form id="recipe-form">
+                            <label class="form-label" for="name-of-dish">Name of the dish</label>
+                            <input type="text" class="form-input" id="name-of-dish" name="recipe-name" placeholder="Name...">
+                            <label class="form-label" for="servings">Servings</label>
+                            <input type="text" class="form-input" id="servings" name="recipe-servings" placeholder="Number of servings...">
+                            <label class="form-label" for="ingredients">Ingredients</label>
+                            <input type="text" class="form-input" id="ingredients" name="recipe-ingredients" placeholder="Ingredients, separated by commas...">
+                            <input id="submitBtn1" class="button" type="button" value="Submit">
+                        </form>
+                    </div>
+                </div>
+                <div class="secondDiv">
+                    <div class="recipe-block">
+                        <img class="card-img-top" src="../images/recipe-card.png" alt="Recipe logo">
+                        <div class="recipe-body">
+                            <h2 id="recipe-title-card" class="recipe-title">Ultimate meringue</h2>
+                            <hr>
+                            <h3 class="recipe-heading">Servings:</h3>
+                            <p id="recipe-servings-card" class="recipe-text">16</p>
+                            <h3 class="recipe-heading">Ingredients:</h3>
+                            <p class="recipe-text">
+                                <ul id="recipe-ingredients-card" class="ingredients-list">
+                                    <li>4 large organic egg whites, at room temperature</li>
+                                    <li>115g caster sugar</li>
+                                    <li>115g icing sugar</li>
+                                </ul>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="tabs-2">
+                <div class="firstDiv">
+                    <div class="intro">
+                        <h1>The reading list</h1>
+                        <hr>
+                        <h3>Keep track of the books you've read and those you want to read!</h3>
+                    </div>
+                    <hr>
+                    <div class="form">
+                        <form id="reading-list-form">
+                            <label class="form-label" for="book-title">Title of the book</label>
+                            <input type="text" class="form-input" id="book-title" name="book-title" placeholder="Title...">
+                            <label class="form-label" for="book-author">Author of the book</label>
+                            <input type="text" class="form-input" id="book-author" name="book-author" placeholder="Author...">
+                            <label class="form-label" for="alreadyRead">Have you read the book?</label>
+                            <input type="radio" class="form-input-inline" id="read" name="alreadyRead" value="read">
+                            <label class="form-label" for="read">Yes</label>
+                            <input type="radio" class="form-input-inline" id="notRead" name="alreadyRead" value="notRead">
+                            <label class="form-label" for="notRead">No</label>
+                            <input id="submitBtn2" class="button" type="button" value="Submit">
+                        </form>
+                    </div>
+                </div>
+                <div class="secondDiv">
+                    <div class="recipe-block">
+                        <img class="card-img-top" src="../images/reading-list.svg"alt="Reading list logo">
+                        <div class="recipe-body">
+                            <h2 id="reading-list-card" class="recipe-title">Your reading list:</h2>
+                            <hr>
+                            <h3 class="recipe-heading">You have already read:</h3>                                <ul id="reading-list-card-read" class="ingredients-list">
+                                <li>"The Hobbit" by J.R.R. Tolkien</li>
+                                <li>"The Lord of the Rings" by J.R.R. Tolkien</li>
+                            </ul>
+                            <h3 class="recipe-heading">You still need to read:</h3>
+                            <p class="recipe-text">
+                                <ul id="reading-list-card-not-read" class="ingredients-list">
+                                    <li>"Harry Potter and the Prisoner of Azkaban" by J.K. Rowling</li>
+                                    <li>"Harry Potter and the Order of the Phoenix" by J.K. Rowling</li>
+                                </ul>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="tabs-3">
+                <div class="firstDiv">
+                    <div class="intro">
+                        <h1>Coffee drinks</h1>
+                        <hr>
+                        <h3>Order a coffee drink by type and size!</h3>
+                    </div>
+                    <hr>
+                    <div class="form">
+                        <form id="reading-list-form">
+                            <label class="form-label" for="coffee-type">Type of coffee</label>
+                            <input type="text" class="form-input" id="coffee-type" name="coffee-type" placeholder="Cappuccino, mocha, latte...">
+                            <label class="form-label" for="coffee-size">Size of the drink</label>
+                            <input type="text" class="form-input" id="coffee-size" name="coffee-size" placeholder="0.2, 0.4 or 0.6 ounces...">
+                            <input id="submitBtn3" class="button" type="button" value="Submit">
+                        </form>
+                    </div>
+                </div>
+                <div class="secondDiv">
+                    <div class="recipe-block">
+                        <img class="card-img-top" src="../images/coffee-cups.png" alt="Reading list logo">
+                        <div class="recipe-body">
+                            <h2 id="coffee-drink" class="recipe-title">Your coffee:</h2>
+                            <hr>
+                            <h3 id="coffee-drink-card" class="recipe-heading"></h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../js/jquery-3.2.1.min.js" type="text/javascript"></script>
+    <script src="../js/jquery-ui.js" type="text/javascript"></script>
+    <script>
+        $(function () {
+            $('#tabs').tabs();
+        });
+    </script>
+    <script src="../js/script23.js"></script>
+</body>
+
+</html>

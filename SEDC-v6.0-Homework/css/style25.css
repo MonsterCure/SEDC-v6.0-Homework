@@ -1,0 +1,253 @@
+* {
+    font-family: 'Maven Pro', sans-serif;
+    color: #838C95;
+}
+
+body {
+    position: relative;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #313131;
+}
+
+/* ------------------NAVBAR------------------ */
+.navbar {
+    background-color: #212121;
+}
+
+.navigation-activate {
+    box-shadow: -6px 2px 10px 4px rgb(144, 214, 231);
+}
+
+.nav-link {
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: all .5s ease;
+    min-height: 43px;
+    float: left; /* ========== */
+}
+
+.nav-link:hover {
+    color: rgb(34, 148, 177);
+    border-bottom: 2px solid rgb(34, 148, 177);
+}
+
+.nav-link:focus {
+    color: rgb(34, 148, 177);
+    border-bottom: 2px solid rgb(34, 148, 177);
+}
+
+.nav-link:active {
+    color: rgb(34, 148, 177);
+    border-bottom: 2px solid rgb(34, 148, 177);
+}
+
+/* ------------------HEADER------------------ */
+/* .header {
+    height: 100vh;
+    width: 100%;
+    background: url(../images/christian-perner-91905a.jpg) no-repeat top center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header__banner {
+    width: 70%;
+    color: rgb(41, 39, 39);
+}
+
+.header__banner h1 {
+    color: #212120;
+    letter-spacing: -1px;
+    margin: 0 auto 12px auto;
+}
+
+.header__banner h1 > span {
+    color: rgb(41, 124, 145);
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.header__banner h3 > span {
+    color: rgb(37, 112, 131);
+    font-weight: 600;
+} */
+
+/* ------------------CAROUSEL------------------ */
+.carousel-item {
+    height: 100vh;
+    margin-top: -59px;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
+.carousel-caption {
+    top: 50%;
+    transform: translateY(-50%);
+    bottom: initial;
+
+}
+
+.carousel-heading {
+    color: #42423f;
+    letter-spacing: -1px;
+    margin: 0 auto 12px auto;
+}
+
+.carousel-heading > span {
+    color: rgb(41, 124, 145);
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+/* ------------------ALL SECTIONS------------------ */
+.section {
+    padding: 85px 50px 50px 50px;
+}
+
+.section-heading {
+    letter-spacing: 1px;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin: 0 0 50px 0;
+}
+
+.section-heading span {
+    border-bottom: 3px solid #11ABB0;
+    color: #313131;
+}
+
+/* ------------------ABOUT ME------------------ */
+.about-me {
+    min-height: 550px;
+    background: url(../images/paulina-jadeszko-101073.jpg) no-repeat fixed center;
+}
+
+.about-me h3,
+.about-me h6 {
+    color: #fff;
+    margin: 15px 0;
+}
+
+.about-me--wrapper {
+    min-height: 550px;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.about-me--container {
+    padding-top: 75px;
+}
+
+.person {
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.person img {
+    height: 200px;
+    border: 5px solid #414142;
+    box-shadow: 0 0 0 10px rgba(0, 0, 0, 0.397);
+}
+
+.person__info {
+    line-height: 30px;
+    color: #fff;
+}
+
+.person__footer .btn-info {
+    margin-right: 10px;
+    background-color: #17a2b8;
+    border-color: #17a2b8;
+}
+
+.person__footer .btn-info > .fa {
+    color: #fff;
+    margin-right: 5px;
+}
+
+/* ------------------SKILS------------------ */
+
+.progress-skills {
+    margin: 10px 0;
+    height: 2rem;
+}
+
+/* ------------------RESUME------------------ */
+.resume,
+.contact-me {
+    background-color: #212121;
+}
+
+.resume h1,
+.resume h2,
+.resume h4,
+.resume p,
+.resume .section-heading,
+.resume .section-heading span {
+    color: #fff;
+}
+
+.resume-subsection {
+    padding-top: 50px;
+}
+
+/* ------------------PORTFOLIO------------------ */
+.card {
+    margin-bottom: 30px;
+}
+
+/* ------------------CONTACT ME------------------ */
+.contact-me h2,
+.contact-me label,
+.contact-me .section-heading,
+.contact-me .section-heading span {
+    color: #fff;
+}
+
+/* ------------------BACK-TO-TOP BUTTON------------------ */
+#back-to-top {
+    position: fixed;
+    bottom: 65px;
+    right: 65px;
+    z-index: 9999;
+    width: 65px;
+    height: 65px;
+    font-size: 1.5em;
+    text-align: center;
+    line-height: 60px;
+    background: rgba(74, 99, 109, 0.23);
+    cursor: pointer;
+    border: 0;
+    border-radius: 20px;
+    text-decoration: none;
+    transition: opacity 0.2s ease-out;
+    opacity: 0;
+}
+
+#back-to-top:hover {
+    background: rgba(55, 71, 78, 0.23);
+}
+
+#back-to-top.show {
+    opacity: 1;
+}
+
+/* ------------------MEDIA QUERIES------------------ */
+@media all and (max-width: 720px) {
+    .header__banner {
+        width: 90%;
+    }
+}

@@ -1,0 +1,63 @@
+* {
+    font-family: 'Cormorant Garamond', serif;
+    margin: 0;
+    padding: 0;
+}
+
+table {
+    background-color: rgba(243, 241, 239, 0.5);
+    border: 1px solid #2c1e0f;
+    height: auto;
+    margin: auto;
+    width: 60%;
+}
+
+table td,
+table th {
+    border: 1px solid #2c1e0f;
+    color: #2c1e0f;
+	font-size: 35px;
+    font-weight: 500;
+    text-align: center;
+    width: 95px;
+}
+
+table th {
+    padding: 15px 0;
+}
+
+input {
+    background-color: rgba(243, 241, 239, 0.096);
+    border: none;
+    color: #346d49;
+    font-size: 38px;
+    font-weight: 300;
+    padding: 15px 0;
+    text-align: center;
+    width: 100%;
+}
+
+.container {
+    background: url(../images/andrew-branch-106863.jpg) no-repeat fixed center;
+    height: 1000px;
+    margin: 0 auto;
+}
+
+.result {
+    color: #426156;
+    height: 40px;
+    font-size: 40px;
+    font-weight: 500;
+    padding: 20px;
+    text-align: left;
+}
+
+#table {
+    padding-bottom: 200px;
+    padding-top: 100px;
+}
+
+#convertButton:hover {
+    background-color: rgba(93, 136, 121, 0.4);
+    cursor: pointer;
+}

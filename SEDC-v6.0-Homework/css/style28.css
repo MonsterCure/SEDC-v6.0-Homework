@@ -1,0 +1,159 @@
+* {
+    font-family: 'Cormorant Garamond', serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgba(247, 201, 210, 0.09);    
+}
+
+h1 {
+    font-size: 2.5em;
+    font-weight: 300;
+    margin: auto;
+    padding-bottom: 10px;    
+    padding-top: 50px;
+    text-align: center;
+    width: 80%;
+}
+
+h2 {
+    color: #463535;
+    font-size: 2em;
+    font-weight: 300;
+    margin: auto;
+    padding: 15px;
+    text-align: center;
+    width: 80%;
+}
+
+h3 {
+    color: #4B3950;
+    font-size: 1.8em;
+    font-weight: 300;
+    margin: 0 auto;
+    padding: 10px;
+    text-align: left;
+    width: 90%;
+}
+
+hr {
+    border: 0;
+    color: #463535;
+    height: 1px; 
+    background-image: -webkit-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+    background-image: -moz-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+    background-image: -ms-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+    background-image: -o-linear-gradient(left, #f0f0f0, #8c8b8b, #f0f0f0);
+    margin: 20px auto;
+    width: 80%;
+}
+
+img {
+    border: 1px solid rgba(99, 78, 98, 0.86);
+    float: right;
+    margin: 0px 0px 15px 40px;
+    width: 180px;
+    height: 200px;
+}
+
+input {
+    background-color: rgba(223, 206, 223, 0.81);
+    border: 1px solid;
+    color: #232425;
+    display: block;
+    font-size: 1.8em;    
+    font-weight: 300;
+    margin: 15px auto;
+    padding: 10px 15px;
+    text-align: left;
+    width: 30%;
+    min-width: 325px;
+}
+
+input:hover {
+    background-color: rgba(223, 199, 223, 0.8);
+}
+
+p {
+    background-color: transparent;
+    color: #413546;
+    font-size: 1.3em;
+    font-weight: 300;
+    margin: 0 auto;
+    padding: 10px;
+    width: 90%;
+}
+
+.results {
+    background-color: none;
+    height: auto;
+    margin: auto;
+    padding: 15px;
+    width: 85%;
+}
+
+.productDiv {
+    background-color: none;
+    height: auto;
+    margin: auto;
+    padding: 15px;
+    width: 85%;
+}
+
+.productDescription {
+    margin-bottom: 80px;
+    text-align: justify;
+}
+
+.span {
+    font-style: italic;
+    font-weight: 400;
+}
+
+#srcbtn {
+    background-color: rgba(155, 111, 135, 0.4);
+    margin-bottom: 60px;
+    text-align: center;
+    width: 10%;
+    min-width: 105px;
+}
+
+#srcbtn:hover {
+    background-color: rgba(119, 78, 101, 0.4);
+    cursor: pointer;
+}
+
+#wrapper {
+    height: auto;
+    position: relative;
+}
+
+#back-to-top {
+    position: fixed;
+    bottom: 65px;
+    right: 65px;
+    z-index: 9999;
+    width: 65px;
+    height: 65px;
+    font-size: 2em;
+    text-align: center;
+    line-height: 60px;
+    background: rgba(226, 215, 226, 0.73);
+    color: rgb(107, 76, 102);
+    cursor: pointer;
+    border: 0;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: opacity 0.2s ease-out;
+    opacity: 0;
+}
+
+#back-to-top:hover {
+    background: rgba(78, 55, 75, 0.23);
+}
+
+#back-to-top.show {
+    opacity: 1;
+}

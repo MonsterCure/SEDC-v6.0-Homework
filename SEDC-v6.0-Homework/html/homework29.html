@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!--[if lt IE 9]>
+                <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <![endif]-->
+    <title>Address Book</title>
+    <link id="favicon" rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Play:400,700&amp;subset=cyrillic,cyrillic-ext,latin-ext" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="../css/style29.css">
+</head>
+
+<body>
+    <div id="wrapper">
+        <div id="contact-form">
+            <form action="" id="form">
+                <label for="firstName">First name: </label>
+                <input type="text" id="firstName" name="firstName" required>
+                <label for="lastName">Last name: </label>
+                <input type="text" id="lastName" name="lastName" required>
+                <label for="email">E-mail: </label>
+                <input type="text" id="email" name="email" required>
+                <label for="group">Group:</label>
+                <input type="radio" name="group" id="relative" class="radioInput" value="relative" required>
+                <label for="relative" class="radioInput">Relative</label>
+                <input type="radio" id="friend" class="radioInput" name="group" value="friend" required>
+                <label for="friend" class="radioInput">Friend</label>
+                <input type="radio" id="acquaintance" class="radioInput" name="group" value="acquaintance" required>
+                <label for="acquaintance" class="radioInput">Acquaintance</label>
+                <div id="group-input">
+                </div>
+            </form>
+            <button id="submit">Submit</button>
+            <h3 id="alert"></h3>
+        </div>
+        <div id="address-book">
+            <h1>Address Book</h1>
+            <table id="address-book-table">
+                <tr id="address-book-head">
+                    <th>ID</th>
+                    <th>Group</th>                    
+                    <th>First name</th>
+                    <th>Last name</th>
+                    <th>Email</th>
+                    <th>Info</th>
+                </tr>
+            </table>
+            <button id="delete">Delete</button>
+        </div>
+    </div>
+    
+    <script src="../js/script29.js" type="text/javascript"></script>
+</body>
+
+</html>

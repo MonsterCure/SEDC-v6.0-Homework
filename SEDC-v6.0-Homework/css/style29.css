@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Play', sans-serif;
+}
+
+label, input {
+    font-size: 16px;
+    display: block;
+    color: rgb(55, 72, 77);
+}
+
+label {
+    font-weight: 700;
+}
+
+input, button {
+    border: 1px solid rgb(55, 72, 77);    
+    border-radius: 1px;
+    margin: 10px auto;
+}
+
+input {
+    width: 300px;
+    height: 30px;
+    padding: 5px;   
+}
+
+input[type="checkbox"] {
+    display: inline-block;
+    width: 20px;
+    height: 10px;
+    margin: 0 auto;
+    padding: 0px 5px;
+}
+
+button {
+    width: auto;
+    height: auto;
+    display: block;
+    font-size: 18px;
+    padding: 10px;
+    color: rgb(55, 72, 77);
+    background-color: rgb(227, 236, 236);
+}
+
+button:hover {
+    background-color: rgb(205, 228, 230);
+    cursor: pointer;    
+}
+
+h3 {
+    padding: 20px 0px;
+}
+
+table, table th, table td {
+    padding: 16px;
+	text-align: left;
+}
+
+table tr {
+    width: 100%;
+}
+
+table th {
+    font-weight: bold;
+    width: 20%;
+}
+
+table td {
+    width: 20%;
+}
+
+.radioInput {
+    display: inline-block;
+    width: auto;
+    height: auto;
+    padding: 10px;
+    font-weight: 400;
+}
+
+#wrapper {
+    text-align: center;
+    width: auto;
+    height: auto;
+}
+
+#contact-form, #address-book {
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 100px 10px;
+}
+
+#contact-form {
+    width: 40%;
+    min-width: 385px;
+    float: left;
+}
+
+#address-book {
+    width: 60%;
+    min-width: 500px;
+    color: rgb(55, 72, 77);
+    font-size: 16px;
+    float: right;
+}
+
+#delete {
+    display: block;
+}
+
+@media screen and (max-width: 890px) {
+    #contact-form, #address-book {
+        display: block;
+        width: 80%;
+        float: none;
+    }
+}

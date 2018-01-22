@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Exo', sans-serif;
+    font-weight: 300;
+}
+
+img {
+    width: 10%;
+    margin: 30px auto;
+}
+
+h1 {
+    font-size: 3em;
+    text-transform: uppercase;
+}
+
+h3 {
+    font-size: 2.5em;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 30px auto;    
+}
+
+h6 {
+    font-size: 1.2em;
+    font-weight: 400;
+    padding: 10px 20px;
+    display: inline-block;
+}
+
+span, button, input {
+    font-size: 1.2em;
+    display: inline-block;
+}
+
+span {
+    margin: 0 10px;
+}
+
+input, button {
+    border: 1px solid rgb(42, 47, 49);    
+    border-radius: 1px;
+    margin: 0 auto;
+    padding: 5px;
+}
+
+input {
+    width: 60px;
+}
+
+button {
+    width: auto;
+    height: auto;
+    color: rgb(52, 55, 56);
+    background-color: rgb(227, 236, 236);
+}
+
+button:hover {
+    background-color: rgb(218, 227, 228);
+    cursor: pointer;
+}
+
+.container {
+    width: 33%;
+    float: left;
+    box-sizing: border-box;
+}
+
+.second-container {
+    width: 85%;
+    margin: 20px auto;
+    padding: 20px 30px;
+    border: 1px solid rgb(42, 47, 49);
+    text-align: left;
+}
+
+#wrapper {
+    width: 100%;
+    height: auto;
+    text-align: center;
+}
+
+#bus-wrapper {
+    width: 90%;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 1380px) {
+    .container {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 970px) {
+    .container {
+        width: 100%;
+    }
+}

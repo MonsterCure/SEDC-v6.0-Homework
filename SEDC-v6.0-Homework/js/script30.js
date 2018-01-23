@@ -86,9 +86,11 @@ CustomBus.prototype.getAvailableSeats = function (value) {
 /*-------ADDING A CHANGE WORKING STATE METHOD TO CUSTOM BUS--------*/
 CustomBus.prototype.changeIsWorking = function (value) {
     let stateSpan = document.getElementById(`${value}_state`);
+    let currentlySpan = document.getElementById(`${value}_currently`);    
     if (this.isWorking) {
         this.isWorking = false;
         stateSpan.textContent = 'broken';
+        currentlySpan.textContent = 'at the bus garage';        
     } else {
         this.isWorking = true;
         stateSpan.textContent = 'in working condition';

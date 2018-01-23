@@ -1,3 +1,4 @@
+/*---------------GLOBAL VARIABLES/DOM ELEMENTS---------------*/
 let form = document.getElementById('form');
 let groupInput = document.getElementById('group-input');
 let inputFields = document.querySelectorAll('input');
@@ -6,6 +7,7 @@ let deleteBtn = document.getElementById('delete');
 let table = document.getElementById('address-book-table');
 let alert = document.getElementById('alert');
 
+/*---------------DEFINING THE MAIN PERSON CLASS---------------*/
 class Person {
     constructor(firstName, lastName, email) {
         this.firstName = firstName;
@@ -14,6 +16,7 @@ class Person {
     }
 }
 
+/*---------DEFINING THE RELATIVE CLASS (EXTENSION OF PERSON)--------*/
 class Relative extends Person {
     constructor(firstName, lastName, email, relation) {
         super(firstName, lastName, email);
@@ -21,6 +24,7 @@ class Relative extends Person {
     }
 }
 
+/*---------DEFINING THE FRIEND CLASS (EXTENSION OF PERSON)--------*/
 class Friend extends Person {
     constructor(firstName, lastName, email, yearsOfFriendship, friendsFrom) {
         super(firstName, lastName, email);
@@ -29,6 +33,7 @@ class Friend extends Person {
     }
 }
 
+/*--------DEFINING THE ACQUAINTANCE CLASS (EXTENSION OF PERSON)-------*/
 class Acquaintance extends Person {
     constructor(firstName, lastName, email, acquaintedThrough) {
         super(firstName, lastName, email);
@@ -36,11 +41,13 @@ class Acquaintance extends Person {
     }
 }
 
+/*------------------DEFINING THE ADDRESS BOOK CLASS------------------*/
 class AddressBook {
     constructor(group) {
         this.persons = [];
     }
 
+    // The method that will add a new contact/person to the address book
     AddPerson(group, person) {
         this.persons.push(person);
         let row = document.createElement('tr');
@@ -61,26 +68,19 @@ class AddressBook {
         table.appendChild(row);
     }
 
-    RemovePerson() {
-        let checkboxInputs = document.querySelectorAll('input[type="checkbox"]');
-        let idEntries = document.querySelectorAll('.id-entry');
-        checkboxInputs.forEach((item, index) => {
-            if (item.checked) {
-                this.persons.splice(index, 1);
-                table.removeChild(table.childNodes[index + 2]);
-            }
-        });
-        for (let i = 0; i < checkboxInputs.length; i++) {
-            idEntries[i].innerHTML = i + 1;
-            checkboxInputs[i].id = i + 1;
-        }
+    // The method that will remove a contact/person from the address book    
+    RemovePerson(value) {
+        this.persons.splice(value, 1);
+        table.removeChild(table.childNodes[value + 2]);
         alert.style.color = 'rgb(95, 23, 23)';
         alert.textContent = 'You have deleted a person from the address book.';
     }
 }
 
+// Creating an instance of the Address Book class/object
 let addressBook = new AddressBook;
 
+/*---A FUNCTION WHICH EXTENDS THE CONTACT FORM ACC. TO TYPE OF PERSON/CONTACT---*/
 function extendForm(...values) {
     groupInput.innerHTML = '';
     values.forEach((value) => {
@@ -97,6 +97,7 @@ function extendForm(...values) {
     });
 }
 
+/*-------INPUT FIELDS EVENT LISTENERS FOR EXTENSION OF THE FORM-------*/
 inputFields.forEach((element) => {
     element.addEventListener('change', () => {
         let group = form.group.value;
@@ -118,6 +119,7 @@ inputFields.forEach((element) => {
     });
 });
 
+/*------------------SUBMIT BUTTON EVENT LISTENER------------------*/
 submitBtn.addEventListener('click', (e) => {
     e.preventDefault();
 
@@ -127,7 +129,9 @@ submitBtn.addEventListener('click', (e) => {
     let group = form.group.value;
     let person;
 
+    // Validation for the input fields
     if (firstName !== '' && lastName !== '' && email !== '' && email.includes('@') && group !== '') {
+        // Creating an instance of an object acc. to type of contact input
         switch (group) {
             case 'relative':
                 let relation = form.relation.value;
@@ -143,6 +147,7 @@ submitBtn.addEventListener('click', (e) => {
                 person = new Acquaintance(firstName, lastName, email, acquaintedThrough);
                 break;
         }
+        // Calling the addressBook AddPerson method
         addressBook.AddPerson(group, person);
         alert.style.color = 'rgb(14, 87, 59)';
         alert.textContent = 'You have successfully entered an e-mail address!';
@@ -154,6 +159,7 @@ submitBtn.addEventListener('click', (e) => {
     form.reset();
 });
 
+/*------------------ENTER KEYPRESS EVENT LISTENER------------------*/
 form.addEventListener('keypress', (e) => {
     if (e.keyCode === 13) {
         e.preventDefault();
@@ -161,7 +167,20 @@ form.addEventListener('keypress', (e) => {
     }
 });
 
+/*------------------DELETE BUTTON EVENT LISTENER------------------*/
 deleteBtn.addEventListener('click', (e) => {
     e.preventDefault();
-    addressBook.RemovePerson();
+    let checkboxInputs = document.querySelectorAll('input[type="checkbox"]');
+    let idEntries = document.querySelectorAll('.id-entry');
+    checkboxInputs.forEach((item, index) => {
+        // Validation for deleting if a contact is checked
+        if (item.checked) {
+            // Calling the addressBook RemovePerson method
+            addressBook.RemovePerson(index);
+        }
+    });
+    for (let i = 0; i < checkboxInputs.length; i++) {
+        idEntries[i].innerHTML = i + 1;
+        checkboxInputs[i].id = i + 1;
+    }
 });

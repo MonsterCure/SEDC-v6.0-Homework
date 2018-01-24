@@ -70,6 +70,7 @@ button:hover {
 
 .second-container {
     width: 85%;
+    min-height: 525px;
     margin: 20px auto;
     padding: 20px 30px;
     border: 1px solid rgb(42, 47, 49);

@@ -54,21 +54,13 @@ CustomBus.prototype.getPassengersCapacity = function (value) {
 /*------------ADDING A GET IS WORKING METHOD TO CUSTOM BUS------------*/
 CustomBus.prototype.getIsWorking = function (value) {
     let stateSpan = document.getElementById(`${value}_state`);
-    if (this.isWorking) {
-        stateSpan.textContent = 'in working condition';
-    } else {
-        stateSpan.textContent = 'broken';
-    }
+    this.isWorking ? stateSpan.textContent = 'in working condition' : stateSpan.textContent = 'broken';
 }
 
 /*------------ADDING A GET IS MOVING METHOD TO CUSTOM BUS-------------*/
 CustomBus.prototype.getIsMoving = function (value) {
     let currentlySpan = document.getElementById(`${value}_currently`);
-    if (this.isMoving && this.isWorking) {
-        currentlySpan.textContent = 'in circulation';
-    } else {
-        currentlySpan.textContent = 'at the bus garage';
-    }
+    this.isMoving && this.isWorking ? currentlySpan.textContent = 'in circulation' : currentlySpan.textContent = 'at the bus garage';
 }
 
 /*---------------ADDING A GET LINE METHOD TO CUSTOM BUS---------------*/
@@ -86,29 +78,14 @@ CustomBus.prototype.getAvailableSeats = function (value) {
 /*-------ADDING A CHANGE WORKING STATE METHOD TO CUSTOM BUS--------*/
 CustomBus.prototype.changeIsWorking = function (value) {
     let stateSpan = document.getElementById(`${value}_state`);
-    let currentlySpan = document.getElementById(`${value}_currently`);    
-    if (this.isWorking) {
-        this.isWorking = false;
-        stateSpan.textContent = 'broken';
-        currentlySpan.textContent = 'at the bus garage';        
-    } else {
-        this.isWorking = true;
-        stateSpan.textContent = 'in working condition';
-    }
-    return this.isWorking;
+    let currentlySpan = document.getElementById(`${value}_currently`);
+    this.isWorking ? (this.isWorking = false, stateSpan.textContent = 'broken', currentlySpan.textContent = 'at the bus garage') : (this.isWorking = true, stateSpan.textContent = 'in working condition');
 }
 
 /*-------ADDING A CHANGE MOVING STATE METHOD TO CUSTOM BUS--------*/
 CustomBus.prototype.changeIsMoving = function (value) {
     let currentlySpan = document.getElementById(`${value}_currently`);
-    if (this.isMoving) {
-        this.isMoving = false;
-        currentlySpan.textContent = 'at the bus garage';
-    } else if (this.isWorking) {
-        this.isMoving = true;
-        currentlySpan.textContent = 'in circulation';
-    }
-    return this.isMoving;
+    this.isMoving ? (this.isMoving = false, currentlySpan.textContent = 'at the bus garage') : this.isWorking ? (this.isMoving = true, currentlySpan.textContent = 'in circulation') : this.isMoving;
 }
 
 // Creating 6 buses/instances of the CustomBus class
@@ -119,61 +96,21 @@ let bus4 = new CustomBus('single-decker', 'rgb(44, 117, 167)', 6, 52, 32, 8);
 let bus5 = new CustomBus('double-decker', 'rgb(180, 128, 50)', 8, 132, 85, 23);
 let bus6 = new CustomBus('articulated', 'rgb(104, 68, 163)', 8, 102, 35, 16);
 
+// Creating an array of the 6 buses/instances of the CustomBus class
+let busObjects = [bus1, bus2, bus3, bus4, bus5, bus6];
+
 /*----FILLING IN THE INFO ON THE BUSES IN THE HTML ON WINDOW LOAD-----*/
 window.onload = function () {
-    bus1.getColor('bus1');
-    bus1.getType('bus1');
-    bus1.getNumberOfTires('bus1');
-    bus1.getPassengersCapacity('bus1');
-    bus1.getIsWorking('bus1');
-    bus1.getIsMoving('bus1');
-    bus1.getLine('bus1');
-    bus1.getAvailableSeats('bus1');
-
-    bus2.getColor('bus2');
-    bus2.getType('bus2');
-    bus2.getNumberOfTires('bus2');
-    bus2.getPassengersCapacity('bus2');
-    bus2.getIsWorking('bus2');
-    bus2.getIsMoving('bus2');
-    bus2.getLine('bus2');
-    bus2.getAvailableSeats('bus2');
-
-    bus3.getColor('bus3');
-    bus3.getType('bus3');
-    bus3.getNumberOfTires('bus3');
-    bus3.getPassengersCapacity('bus3');
-    bus3.getIsWorking('bus3');
-    bus3.getIsMoving('bus3');
-    bus3.getLine('bus3');
-    bus3.getAvailableSeats('bus3');
-
-    bus4.getColor('bus4');
-    bus4.getType('bus4');
-    bus4.getNumberOfTires('bus4');
-    bus4.getPassengersCapacity('bus4');
-    bus4.getIsWorking('bus4');
-    bus4.getIsMoving('bus4');
-    bus4.getLine('bus4');
-    bus4.getAvailableSeats('bus4');
-
-    bus5.getColor('bus5');
-    bus5.getType('bus5');
-    bus5.getNumberOfTires('bus5');
-    bus5.getPassengersCapacity('bus5');
-    bus5.getIsWorking('bus5');
-    bus5.getIsMoving('bus5');
-    bus5.getLine('bus5');
-    bus5.getAvailableSeats('bus5');
-
-    bus6.getColor('bus6');
-    bus6.getType('bus6');
-    bus6.getNumberOfTires('bus6');
-    bus6.getPassengersCapacity('bus6');
-    bus6.getIsWorking('bus6');
-    bus6.getIsMoving('bus6');
-    bus6.getLine('bus6');
-    bus6.getAvailableSeats('bus6');
+    for (let i = 0; i < busObjects.length; i++) {
+        busObjects[i].getColor(`bus${i + 1}`);
+        busObjects[i].getType(`bus${i + 1}`);
+        busObjects[i].getNumberOfTires(`bus${i + 1}`);
+        busObjects[i].getPassengersCapacity(`bus${i + 1}`);
+        busObjects[i].getIsWorking(`bus${i + 1}`);
+        busObjects[i].getIsMoving(`bus${i + 1}`);
+        busObjects[i].getLine(`bus${i + 1}`);
+        busObjects[i].getAvailableSeats(`bus${i + 1}`);
+    }
 }
 
 /*-----------EVENT LISTENER FOR THE CHANGE STATE BUTTONS------------*/
@@ -181,26 +118,11 @@ changeStateBtn.forEach((element) => {
     element.addEventListener('click', (e) => {
         let busName = element.parentNode.children[0].textContent;
 
-        // Checking which changeStateBtn had been clicked, acc. to the html heading with the name of the bus, and calling the changeIsWorking methods for the buses accordingly
-        switch (busName) {
-            case 'Bus 1':
-                bus1.changeIsWorking('bus1');
-                break;
-            case 'Bus 2':
-                bus2.changeIsWorking('bus2');
-                break;
-            case 'Bus 3':
-                bus3.changeIsWorking('bus3');
-                break;
-            case 'Bus 4':
-                bus4.changeIsWorking('bus4');
-                break;
-            case 'Bus 5':
-                bus5.changeIsWorking('bus5');
-                break;
-            case 'Bus 6':
-                bus6.changeIsWorking('bus6');
-                break;
+        for (let i = 0; i < busObjects.length; i++) {
+            // Checking which changeStateBtn had been clicked, acc. to the html heading with the name of the bus, and calling the changeIsWorking methods for the buses accordingly
+            if (busName[4] == i + 1) {
+                busObjects[i].changeIsWorking(`bus${i + 1}`);
+            }
         }
     });
 });
@@ -210,26 +132,11 @@ changeCurrentlyBtn.forEach((element) => {
     element.addEventListener('click', (e) => {
         let busName = element.parentNode.children[0].textContent;
 
-        // Checking which changeCurrentlyBtn had been clicked, acc. to the html heading with the name of the bus, and calling the changeIsMoving methods for the buses accordingly
-        switch (busName) {
-            case 'Bus 1':
-                bus1.changeIsMoving('bus1');
-                break;
-            case 'Bus 2':
-                bus2.changeIsMoving('bus2');
-                break;
-            case 'Bus 3':
-                bus3.changeIsMoving('bus3');
-                break;
-            case 'Bus 4':
-                bus4.changeIsMoving('bus4');
-                break;
-            case 'Bus 5':
-                bus5.changeIsMoving('bus5');
-                break;
-            case 'Bus 6':
-                bus6.changeIsMoving('bus6');
-                break;
+        for (let i = 0; i < busObjects.length; i++) {
+            // Checking which changeCurrentlyBtn had been clicked, acc. to the html heading with the name of the bus, and calling the changeIsMoving methods for the buses accordingly
+            if (busName[4] == i + 1) {
+                busObjects[i].changeIsMoving(`bus${i + 1}`);
+            }
         }
     });
 });
@@ -247,7 +154,7 @@ changeLineBtn.forEach((element) => {
             let saveLineBtn = document.createElement('button');
             saveLineBtn.textContent = 'Save';
             element.parentNode.insertBefore(saveLineBtn, element.nextSibling);
-            
+
             // An event listener for the newly created save button
             saveLineBtn.addEventListener('click', (e) => {
                 let lineSpanValue = document.getElementById(`bus${value}_line_input`).value;
@@ -255,55 +162,11 @@ changeLineBtn.forEach((element) => {
                 let objectName = `bus${value}`;
 
                 // Validation for the line number
-                switch (objectName) {
-                    case 'bus1':
-                        if (lineSpanValue > 0 && lineSpanValue <= 95) {
-                            lineSpan.textContent = lineSpanValue;
-                        } else {
-                            alert(`Please input a number between 0 and 95.`);
-                            lineSpan.textContent = bus1.line;
-                        }
-                        break;
-                    case 'bus2':
-                        if (lineSpanValue > 0 && lineSpanValue <= 95) {
-                            lineSpan.textContent = lineSpanValue;
-                        } else {
-                            alert(`Please input a number between 0 and 95.`);
-                            lineSpan.textContent = bus2.line;
-                        }
-                        break;
-                    case 'bus3':
-                        if (lineSpanValue > 0 && lineSpanValue <= 95) {
-                            lineSpan.textContent = lineSpanValue;
-                        } else {
-                            alert(`Please input a number between 0 and 95.`);
-                            lineSpan.textContent = bus3.line;
-                        }
-                        break;
-                    case 'bus4':
-                        if (lineSpanValue > 0 && lineSpanValue <= 95) {
-                            lineSpan.textContent = lineSpanValue;
-                        } else {
-                            alert(`Please input a number between 0 and 95.`);
-                            lineSpan.textContent = bus4.line;
-                        }
-                        break;
-                    case 'bus5':
-                        if (lineSpanValue > 0 && lineSpanValue <= 95) {
-                            lineSpan.textContent = lineSpanValue;
-                        } else {
-                            alert(`Please input a number between 0 and 95.`);
-                            lineSpan.textContent = bus5.line;
-                        }
-                        break;
-                    case 'bus6':
-                        if (lineSpanValue > 0 && lineSpanValue <= 95) {
-                            lineSpan.textContent = lineSpanValue;
-                        } else {
-                            alert(`Please input a number between 0 and 95.`);
-                            lineSpan.textContent = bus6.line;
-                        }
-                        break;
+                if (lineSpanValue > 0 && lineSpanValue <= 95) {
+                    lineSpan.textContent = lineSpanValue;
+                } else {
+                    alert(`Please input a number between 0 and 95.`);
+                    lineSpan.textContent = busObjects[value - 1].line;
                 }
 
                 element.style.visibility = 'visible';
@@ -311,26 +174,11 @@ changeLineBtn.forEach((element) => {
             });
         }
 
-        // Checking which changeLineBtn had been clicked, acc. to the html heading with the name of the bus, and calling the addInput function with the suitable argument value
-        switch (busName) {
-            case 'Bus 1':
-                addInput(1);
-                break;
-            case 'Bus 2':
-                addInput(2);
-                break;
-            case 'Bus 3':
-                addInput(3);
-                break;
-            case 'Bus 4':
-                addInput(4);
-                break;
-            case 'Bus 5':
-                addInput(5);
-                break;
-            case 'Bus 6':
-                addInput(6);
-                break;
+        for (let i = 0; i < busObjects.length; i++) {
+            // Checking which changeLineBtn had been clicked, acc. to the html heading with the name of the bus, and calling the addInput function with the suitable argument value
+            if (busName[4] == i + 1) {
+                addInput(i + 1);
+            }
         }
     });
 });
@@ -343,7 +191,7 @@ changeAvailableSeatsBtn.forEach((element) => {
         // A function to change the DOM to add input fields and save button, and save the newly input value        
         function addInput(value) {
             let seatsSpan = document.getElementById(`bus${value}_seats`);
-            seatsSpan.innerHTML = `<input type="text" id="bus${value}_seats_input">`;            
+            seatsSpan.innerHTML = `<input type="text" id="bus${value}_seats_input">`;
             element.style.visibility = 'hidden';
             let saveSeatsBtn = document.createElement('button');
             saveSeatsBtn.textContent = 'Save';
@@ -356,55 +204,11 @@ changeAvailableSeatsBtn.forEach((element) => {
                 let objectName = `bus${value}`;
 
                 // Validation for the number of available seats
-                switch (objectName) {
-                    case 'bus1':
-                        if (seatsSpanValue > 0 && seatsSpanValue <= bus1.passengers) {
-                            seatsSpan.textContent = seatsSpanValue;
-                        } else {
-                            alert(`Please input a number less than ${bus1.passengers}.`);
-                            seatsSpan.textContent = bus1.availableSeatsCounter;
-                        }
-                        break;
-                    case 'bus2':
-                        if (seatsSpanValue > 0 && seatsSpanValue <= bus2.passengers) {
-                            seatsSpan.textContent = seatsSpanValue;
-                        } else {
-                            alert(`Please input a number less than ${bus2.passengers}.`);
-                            seatsSpan.textContent = bus2.availableSeatsCounter;
-                        }
-                        break;
-                    case 'bus3':
-                        if (seatsSpanValue > 0 && seatsSpanValue <= bus3.passengers) {
-                            seatsSpan.textContent = seatsSpanValue;
-                        } else {
-                            alert(`Please input a number less than ${bus3.passengers}.`);
-                            seatsSpan.textContent = bus3.availableSeatsCounter;
-                        }
-                        break;
-                    case 'bus4':
-                        if (seatsSpanValue > 0 && seatsSpanValue <= bus4.passengers) {
-                            seatsSpan.textContent = seatsSpanValue;
-                        } else {
-                            alert(`Please input a number less than ${bus4.passengers}.`);
-                            seatsSpan.textContent = bus4.availableSeatsCounter;
-                        }
-                        break;
-                    case 'bus5':
-                        if (seatsSpanValue > 0 && seatsSpanValue <= bus5.passengers) {
-                            seatsSpan.textContent = seatsSpanValue;
-                        } else {
-                            alert(`Please input a number less than ${bus5.passengers}.`);
-                            seatsSpan.textContent = bus5.availableSeatsCounter;
-                        }
-                        break;
-                    case 'bus6':
-                        if (seatsSpanValue > 0 && seatsSpanValue <= bus6.passengers) {
-                            seatsSpan.textContent = seatsSpanValue;
-                        } else {
-                            alert(`Please input a number less than ${bus6.passengers}.`);
-                            seatsSpan.textContent = bus6.availableSeatsCounter;
-                        }
-                        break;
+                if (seatsSpanValue > 0 && seatsSpanValue <= busObjects[value - 1].passengers) {
+                    seatsSpan.textContent = seatsSpanValue;
+                } else {
+                    alert(`Please input a number less than ${busObjects[value - 1].passengers}.`);
+                    seatsSpan.textContent = busObjects[value - 1].availableSeatsCounter;
                 }
 
                 element.style.visibility = 'visible';
@@ -412,26 +216,11 @@ changeAvailableSeatsBtn.forEach((element) => {
             });
         }
 
-        // Checking which changeAvailableSeatsBtn had been clicked, acc. to the html heading with the name of the bus, and calling the addInput function with the suitable argument value
-        switch (busName) {
-            case 'Bus 1':
-                addInput(1);
-                break;
-            case 'Bus 2':
-                addInput(2);
-                break;
-            case 'Bus 3':
-                addInput(3);
-                break;
-            case 'Bus 4':
-                addInput(4);
-                break;
-            case 'Bus 5':
-                addInput(5);
-                break;
-            case 'Bus 6':
-                addInput(6);
-                break;
+        for (let i = 0; i < busObjects.length; i++) {
+            // Checking which changeAvailableSeatsBtn had been clicked, acc. to the html heading with the name of the bus, and calling the addInput function with the suitable argument value
+            if (busName[4] == i + 1) {
+                addInput(i + 1);
+            }
         }
     });
 });

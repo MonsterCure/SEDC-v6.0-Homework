@@ -68,10 +68,18 @@ class AddressBook {
         table.appendChild(row);
     }
 
-    // The method that will remove a contact/person from the address book    
+    // The method that will remove a contact/person from the address book
     RemovePerson(value) {
+        let idEntries = document.querySelectorAll('.id-entry');
         this.persons.splice(value, 1);
         table.removeChild(table.childNodes[value + 2]);
+        idEntries.forEach((item, index) => {
+            if (index >= value) {
+                item.textContent = index;
+            } else {
+                item.textContent = index + 1;
+            }
+        });
         alert.style.color = 'rgb(95, 23, 23)';
         alert.textContent = 'You have deleted a person from the address book.';
     }
@@ -171,7 +179,6 @@ form.addEventListener('keypress', (e) => {
 deleteBtn.addEventListener('click', (e) => {
     e.preventDefault();
     let checkboxInputs = document.querySelectorAll('input[type="checkbox"]');
-    let idEntries = document.querySelectorAll('.id-entry');
     checkboxInputs.forEach((item, index) => {
         // Validation for deleting if a contact is checked
         if (item.checked) {
@@ -179,8 +186,4 @@ deleteBtn.addEventListener('click', (e) => {
             addressBook.RemovePerson(index);
         }
     });
-    for (let i = 0; i < checkboxInputs.length; i++) {
-        idEntries[i].innerHTML = i + 1;
-        checkboxInputs[i].id = i + 1;
-    }
 });

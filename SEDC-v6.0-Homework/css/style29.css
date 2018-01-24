@@ -62,6 +62,14 @@ table tr {
     width: 100%;
 }
 
+table td {
+    border-bottom: 1px solid rgba(55, 72, 77, 0.514);
+}
+
+table tr:nth-child(even) {
+    background-color: rgba(240, 245, 245, 0.562);
+}
+
 table th {
     font-weight: bold;
     width: 20%;
@@ -93,6 +101,7 @@ table td {
 
 #contact-form {
     width: 40%;
+    padding-top: 150px;
     min-width: 385px;
     float: left;
 }

@@ -1,0 +1,232 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Buda', cursive;
+    /* font-family: 'Philosopher', sans-serif; */
+    /* font-family: 'Cormorant Upright', serif; */
+    font-weight: 300;
+}
+
+body {
+    background-color: rgba(247, 244, 242, 0.637);
+    color: rgb(110, 88, 79);
+}
+
+header,
+.button-container,
+#family-wrapper>h3 {
+    min-width: 700px;
+}
+
+header>img {
+    width: 100px;
+    height: auto;
+    display: inline-block;
+    margin: 10px auto 0px auto;
+    border: 1px solid rgba(177, 142, 128, 0.548);
+    border-radius: 1px;
+}
+
+header>h1 {
+    font-size: 3em;
+    text-transform: capitalize;
+    display: inline-block;
+    margin: 10px auto;
+    padding: 25px 40px;
+    vertical-align: top;
+}
+
+button {
+    font-size: 1.2em;
+    display: inline-block;
+    width: auto;
+    height: auto;
+    margin: 10px 10px 20px 10px;
+    padding: 5px;
+    color: rgb(56, 54, 52);
+    background-color: rgb(236, 231, 227);
+    border: 1px solid rgba(49, 45, 42, 0.575);
+    border-radius: 1px;
+}
+
+button:hover {
+    background-color: rgb(228, 223, 218);
+    cursor: pointer;
+}
+
+.family-container,
+.second-family-container,
+.main-image {
+    width: 900px;
+    height: 600px;
+    margin: 0 auto;
+}
+
+.family-container,
+.second-family-container {
+    box-sizing: border-box;
+    position: absolute;
+    left: 50%;
+    margin-left: -450px;
+    top: 100px;
+}
+
+.main-image {
+    border: 1px solid rgba(49, 45, 42, 0.575);
+    border-radius: 1px;
+}
+
+.family-name,
+.family-members {
+    color: rgb(56, 54, 52);
+    font-size: 1.2em;
+    text-align: center;
+    width: 100px;
+    height: 30px;
+    position: absolute;
+    display: inline-block;
+}
+
+.family-name {
+    text-transform: uppercase;
+}
+
+.family-members {
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.popup {
+    visibility: hidden;
+    width: 400px;
+    height: 200px;
+    background-color: rgb(236, 231, 227);
+    color: rgb(56, 54, 52);
+    text-align: left;
+    border: 1px solid rgba(49, 45, 42, 0.575);
+    border-radius: 1px;
+    padding: 15px;
+    position: absolute;
+    z-index: 99999;
+    top: -250px;
+    left: 50%;
+    margin-left: -200px;
+    overflow-y: scroll;
+}
+
+.popup.show {
+    visibility: visible;
+    animation: fadeIn 1s;
+    -webkit-animation: fadeIn 1s;
+    -moz-animation: fadeIn 1s;
+}
+
+.popup>h3,
+.popup>p {
+    display: inline-block;
+    padding: 5px;
+    font-size: 1em;
+}
+
+.popup>h3 {
+    font-weight: bold;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+#wrapper {
+    width: 100%;
+    height: auto;
+    text-align: center;
+}
+
+#family-wrapper {
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
+}
+
+#family-name {
+    top: 508px;
+    left: 401px;
+}
+
+#grandfather {
+    top: 437px;
+    left: 343px;
+}
+
+#grandmother {
+    top: 437px;
+    left: 461px;
+}
+
+#parent1 {
+    top: 327px;
+    left: 315px;
+}
+
+#parent2 {
+    top: 378px;
+    left: 281px;
+}
+
+#child1 {
+    top: 339px;
+    left: 168px;
+}
+
+#parent3 {
+    top: 265px;
+    left: 506px;
+}
+
+#parent4 {
+    top: 317px;
+    left: 514px;
+}
+
+#child2 {
+    top: 225px;
+    left: 616px;
+}
+
+#child3 {
+    top: 281px;
+    left: 634px;
+}
+
+#parent5 {
+    top: 203px;
+    left: 415px;
+}
+
+#parent6 {
+    top: 247px;
+    left: 355px;
+}
+
+#child4 {
+    top: 94px;
+    left: 389px;
+}
+
+#child5 {
+    top: 139px;
+    left: 316px;
+}
+
+#child6 {
+    top: 189px;
+    left: 260px;
+}
